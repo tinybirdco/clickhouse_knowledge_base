@@ -46,3 +46,7 @@ html {
 .footer {
   text-align: center;
 }
+
+.navbar__title {
+  font-weight: 500;
+}
