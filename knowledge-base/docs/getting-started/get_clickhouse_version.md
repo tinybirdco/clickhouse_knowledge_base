@@ -1,3 +1,10 @@
+---
+id: get_clickhouse_version
+title: What ClickHouse version am I using?
+tags:
+  - beginner
+  - getting-started
+---
 
 # What ClickHouse version am I using?
 
