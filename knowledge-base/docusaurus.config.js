@@ -9,7 +9,7 @@ const config = {
   title: 'ClickHouse Knowledge Base',
   tagline: 'with love from Tinybird',
   url: 'https://tinybird.co/',
-  baseUrl: '/clickhouse/',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
