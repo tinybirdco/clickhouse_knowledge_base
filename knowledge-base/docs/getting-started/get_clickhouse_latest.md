@@ -3,7 +3,7 @@ id: get_clickhouse_latest
 title: Getting the latest ClickHouse build
 tags:
   - beginner
-  - performance
+  - getting-started
 ---
 
 # Getting the latest ClickHouse build
