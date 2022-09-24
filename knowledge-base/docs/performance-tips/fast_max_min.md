@@ -24,7 +24,7 @@ Ok.
 
 0 rows in set. Elapsed: 6.356 sec.
 
-:) Select argMax(id, value) from myData;
+SELECT argMax(id, value) FROM myData;
 
 SELECT argMax(id, value)
 FROM myData
@@ -37,7 +37,7 @@ Query id: e2c16764-723d-48ad-93ad-64c1b9ab9247
 
 1 row in set. Elapsed: 0.115 sec. Processed 100.00 million rows, 2.20 GB (866.13 million rows/s., 19.06 GB/s.)
 
-:) Select read_rows, read_bytes from system.query_log where initial_query_id = 'e2c16764-723d-48ad-93ad-64c1b9ab9247' and type = 'QueryFinish' \G
+SELECT read_rows, read_bytes FROM system.query_log WHERE initial_query_id = 'e2c16764-723d-48ad-93ad-64c1b9ab9247' AND type = 'QueryFinish' \G
 
 SELECT
     read_rows,
@@ -58,7 +58,7 @@ read_bytes: 2200081879
 To get the id with the highest value we've read the whole table, in this case 100M elements. But the knowledge of the structure allows us to be more clever:
 
 ```sql
-:) Select id from myData ORDER BY value DESC LIMIT 1;
+SELECT id FROM myData ORDER BY value DESC LIMIT 1;
 
 SELECT id
 FROM myData
@@ -73,7 +73,7 @@ Query id: 7c560628-93c6-44be-b533-c25558f96378
 
 1 row in set. Elapsed: 0.003 sec. Processed 41.22 thousand rows, 906.51 KB (15.34 million rows/s., 337.29 MB/s.)
 
-:) Select read_rows, read_bytes from system.query_log where initial_query_id = '7c560628-93c6-44be-b533-c25558f96378' and type = 'QueryFinish' \G
+SELECT read_rows, read_bytes FROM system.query_log where initial_query_id = '7c560628-93c6-44be-b533-c25558f96378' AND type = 'QueryFinish' \G
 
 SELECT
     read_rows,
