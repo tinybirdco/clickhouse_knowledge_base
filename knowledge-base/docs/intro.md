@@ -7,12 +7,7 @@ sidebar_position: 1
 
 Welcome to the ClickHouse® Knowledge Base, curated with love by [Tinybird](https://tinybird.co)! 
 
-This information can be used with any standard ClickHouse® install, including;
-- [Self-hosted FOSS ClickHouse®](https://github.com/ClickHouse/ClickHouse)
-- [Aiven for ClickHouse®](https://docs.aiven.io/docs/products/clickhouse/getting-started.html) 
-- [Altinity Cloud](https://altinity.com/cloud-database/) 
-- [DoubleCloud Managed Service for ClickHouse®](https://double.cloud/services/managed-clickhouse)
-- [ClickHouse® Cloud by ClickHouse Inc](https://clickhouse.com/cloud)
+This information can be used with any standard ClickHouse® install.
 
 # Love ClickHouse, but need something more?
 
