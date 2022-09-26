@@ -1,5 +1,5 @@
 ---
-id: async_insert
+id: aggr_intermediate_state
 title: View the intermediate states of aggregations
 tags:
   - intermediate
