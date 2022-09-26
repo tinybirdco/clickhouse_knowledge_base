@@ -1,12 +1,12 @@
 ---
 id: compression_scan_size
-title: Optimise scans with column compression
+title: Optimize scans with column compression
 tags:
   - beginner
   - performance
 ---
 
-# Optimise scans with column compression
+# Optimize scans with column compression
 
 When running a query, you need to read data from disk. Generally, the more data you read, the slower your query. You can reduce the amount of data read by using compression. Compression can be applied to individual columns when it makes sense to do so.
 
