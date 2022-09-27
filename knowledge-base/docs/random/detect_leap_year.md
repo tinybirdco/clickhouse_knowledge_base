@@ -15,9 +15,9 @@ So, how can you detect whether a year is a leap year?
 Quite easily actually; ClickHouse contains a function `toLastDayOfMonth` which, as you might have guessed, takes an input Date, and returns a Date representing the last day of the given month. So, to find a leap year, simply ask for the last day of February for a given year, and if the returned day is the 29th, you know it is a leap year!
 
 ```sql
-    SELECT toLastDayOfMonth(makeDate(2020, 2, 1))
+SELECT toLastDayOfMonth(makeDate(2020, 2, 1))
 
-    ┌─toLastDayOfMonth(makeDate(2020, 2, 1))─┐
-    │                             2020-02-29 │
-    └────────────────────────────────────────┘
+┌─toLastDayOfMonth(makeDate(2020, 2, 1))─┐
+│                             2020-02-29 │
+└────────────────────────────────────────┘
 ```
