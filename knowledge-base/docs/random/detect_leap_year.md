@@ -1,12 +1,13 @@
 ---
 id: detect_leap_year
-title: Detecting leap years
+title: Detect leap years
+description: Need to detect leap years in ClickHouse? Here's a query to find years that contain 366 days instead of 365.
 tags:
   - beginner
   - random
 ---
 
-# Detecting leap years
+# Detec leap years
 
 A leap year is a year that contains 366 days instead of 365 days, with the extra day occuring on February 29th (rather than February ending on the 28th), and happens every 4 years. They can be really annoying for date math! 
 

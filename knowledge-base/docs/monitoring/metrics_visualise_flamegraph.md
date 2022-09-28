@@ -1,6 +1,7 @@
 ---
 id: metrics_visualise_flamegraph
 title: Visualize stack traces with flamegraphs
+description: Flamegraphs are a great way to visualize metrics from stack traces. Here's how to use flamegraphs to visualize ClickHouse stack traces.
 tags:
   - intermediate
   - monitoring
@@ -8,13 +9,13 @@ tags:
 
 # Visualize stack traces with flamegraphs
 
-Flamegraphs are a great way to visualise metrics from stack traces, helping you to see what contributed to spikes in resource usage, which can identify memory leaks or areas for optimisation.
+Flamegraphs are a great way to visualize metrics from stack traces, helping you see what contributed to spikes in resource usage, so you can identify memory leaks or areas for optimization.
 
 You can configure ClickHouse to store the ClickHouse Server's stack traces in a table, allowing you to query it with SQL and generate a flamegraph visualisation with the [Flamegraph visualiser](https://github.com/brendangregg/FlameGraph).
 
 Of course, you can also ingest your own application's stack traces, and visualise these in the same way, too.
 
-To work with ClickHouse's internal stack straces, we need to enable the `system.trace_log` table.
+To work with ClickHouse's internal stack traces, you need to enable the `system.trace_log` table.
 
 ## ClickHouse Server Configs
 First, enable the `system.trace_log` table.
@@ -56,7 +57,7 @@ Finally, set up the query profiler settings and allow introspection functions
 ```
 ## Generate the Flamegraph
 
-By using the ClickHouse introspection functions, we'll parse the information from the `system.trace_log` to generate a flamegraph. This is the query we'll use:
+By using the ClickHouse introspection functions, you can parse the information from the `system.trace_log` to generate a flamegraph. This is the query you can use:
 
 ```sql
 SELECT
@@ -69,12 +70,12 @@ GROUP BY full_trace
 
 Download the [Flamegraph visualiser](https://github.com/brendangregg/FlameGraph).
 
-We can use the CLI to run the query and pipe the output to the `flamegraph.pl` script:
+You can use the CLI to run the query and pipe the output to the `flamegraph.pl` script:
 
 ```bash
     ./clickhouse client -q "SELECT arrayStringConcat(arrayReverse(arrayMap(x -> demangle(addressToSymbol(x)), trace)), ';') AS full_trace, count() AS samples FROM system.trace_log WHERE event_time >= now() - INTERVAL 5 MINUTE GROUP BY full_trace FORMAT TabSeparated" | ./flamegraph.pl > flamegraph.svg
 ```
 
-Now we can see our flamegraph:
+Now you can see your flamegraph:
 
 ![Flame Graph screenshot](./img/flamegraph.png)

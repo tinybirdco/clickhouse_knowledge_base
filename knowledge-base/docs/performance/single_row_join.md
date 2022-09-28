@@ -1,14 +1,15 @@
 ---
 id: single_row_join
-title: Optimizing single row joins
+title: Optimize single row joins
+description: Wondering how to optimize single row joins in ClickHouse? Use a CROSS JOIN to improve join efficiency in ClickHouse.
 tags:
   - beginner
   - performance
 ---
 
-# Optimizing single row joins
+# Optimize single row joins
 
-Some usecases require that we select a single row, and join it with data from several other tables.
+Some use cases require that we select a single row, and join it with data from several other tables.
 
 The natural first approach to implement this is to perform the individual queries, and then using a LEFT/RIGHT/INNER JOIN to merge the results.
 
@@ -34,9 +35,9 @@ SELECT 1 pk, n1, n2, n3, n4, n5, n6, u1, u2, u3, u4, u5, u6 FROM (
 ) USING _pk
 ```
 
-However, using a CROSS JOIN to create a cartesian product can be about 10% more efficient than the hash merge above.
+Using a CROSS JOIN in this case can create a cartesian product that is about 10% more efficient than the hash merge above.
 
-Note that the below example uses an alternative syntax for a CROSS JOIN, by supplying multiple data sources in the FROM clause.
+Here's an example that uses an alternative syntax for a CROSS JOIN, supplying multiple data sources in the FROM clause.
 
 ```sql
 SELECT 1 pk, n1, n2, n3, n4, n5, n6, u1, u2, u3, u4, u5, u6 FROM

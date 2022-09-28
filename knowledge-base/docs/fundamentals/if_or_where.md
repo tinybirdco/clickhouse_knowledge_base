@@ -1,16 +1,17 @@
 ---
 id: if_or_where
-title: If or WHERE?
+title: When to use -If vs WHERE
+description: Wondering the difference between the -If combinator and the WHERE statement in ClickHouse? Here are some guidelines to help you choose between -If and WHERE in ClickHouse.
 tags:
   - beginner
   - getting-started
 ---
 
-# If or WHERE?
+# When to use -If or WHERE
 
 In SQL, there are always multiple solutions to a problem and these solutions can have different performance characteristics.
 
-In ClickHouse, many functions include an `-If` combinator, that allows you to selectively run a function based on a condition. This can sometimes lead to the questions, should I use `WHERE` or an `-If` function?
+In ClickHouse, many functions include an `-If` combinator that allows you to selectively run a function based on a condition. Because of this, you might ask whether you should use `WHERE` or an `-If` function.
 
 The correct answer depends on your use case, and you should always experiment with different solutions, using the query statistics to measure the differences.
 

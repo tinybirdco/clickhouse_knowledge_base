@@ -1,20 +1,21 @@
 ---
 id: low_cardinality
-title: Using LowCardinality
+title: Use LowCardinality
+description: ClickHouse LowCardinality types can improve the speed of your queries. Here is how and when to use LowCardinality to optimize column storage for faster queries.
 tags:
   - intermediate
   - performance
 ---
 
-# Using LowCardinality
+# Use LowCardinality
 
 The fewer bytes you read from disk, the faster your query.
 
-If your column contains a limited set of repeated values (otherwise known as low cardinality, or low unique-ness) you can optimise the storage of the value of this column by using the `LowCardinality` type.
+If your column contains a limited set of repeated values (otherwise known as low cardinality, or low unique-ness) you can optimize the storage of the value of this column by using the `LowCardinality` type.
 
 The `LowCardinality` type encapsulates other data types, creating a dictionary of possible column values. Rather than storing the raw value many, many times, instead, the column value is a key that points to the raw value in a dictionary.
 
-For example, let's say that `ColumnA` has 5 possible unique values:
+For example, if you had `ColumnA` with 5 possible unique values:
 
 ```bash Unique values
 'Possible String Value 1'
@@ -24,9 +25,9 @@ For example, let's say that `ColumnA` has 5 possible unique values:
 'Possible String Value 5'
 ```
 
-Our table may contain 1 million rows, and 300,000 rows have the value `'Possible String Value 1'` for `ColumnA`. If we store these as a standard `STRING` type, we are storing the entire value `'Possible String Value 1'` 300,000 times, which uses 25 bytes each time, for a total of 7.5 megabytes.
+Your table may contain 1 million rows, and 300,000 rows have the value `'Possible String Value 1'` for `ColumnA`. If you use a standard `STRING` type, you will store the entire value `'Possible String Value 1'` 300,000 times, which uses 25 bytes each time, for a total of 7.5 megabytes.
 
-To optimise, we can set the column type to `LowCardinality`. Every unique value will be stored once, in a dictionary table, for example:
+To optimize, you can set the column type to `LowCardinality`. Every unique value will be stored once, in a dictionary table, for example:
 
 ```bash Unique values dictionary
 1: 'Possible String Value 1'
@@ -36,9 +37,9 @@ To optimise, we can set the column type to `LowCardinality`. Every unique value 
 5: 'Possible String Value 5'
 ```
 
-Now, rather than each of the 300,000 rows storing `'Possible String Value 1'` for `ColumnA`, instead, each of these rows stores the key `1`. When selecting `ColumnA`, we would retrieve the value for key `1` from the dictionary of values. Storing `1` as a 4 byte integer, 300,000 times, would result in a total of 1.2 megabytes, or a 6.25x reduction in bytes.
+Now, rather than each of the 300,000 rows storing `'Possible String Value 1'` for `ColumnA`, instead, each of these rows stores the key `1`. When selecting `ColumnA`, you would retrieve the value for key `1` from the dictionary of values. Storing `1` as a 4 byte integer, 300,000 times, would result in a total of 1.2 megabytes, or a 6.25x reduction in bytes.
 
-Here's a worked example.
+Here's an example:
 
 ```sql
 DROP DATABASE IF EXISTS lc;
@@ -70,7 +71,7 @@ select formatReadableSize(sum(bytes_on_disk)), count() from system.parts WHERE t
 select formatReadableSize(sum(bytes_on_disk)), count() from system.parts WHERE table = 'lowcard' and active FORMAT PrettyCompact;
 ```
 
-You can already observe that the table using the LowCardinality column requires less disk space.
+You can already see that the table using the LowCardinality column requires less disk space.
 You can confirm this by doing a query and checking the statistics returned by ClickHouse.
 
 ```sql

@@ -1,6 +1,7 @@
 ---
 id: explore_data_from_terminal
 title: Explore data from the terminal
+description: Want to explore data using ClickHouse in the terminal? Here's how to do that with the clickhouse-client command line interface.
 tags:
   - beginner
   - getting-started
@@ -8,7 +9,7 @@ tags:
 
 # Explore data from the terminal
 
-ClickHouse comes with a very handy command line terminal `clickhouse-client` to explore data, debug queries and more.
+ClickHouse comes with a very handy command line interface `clickhouse-client` to explore data, debug queries, and more.
 
 Here are some examples of using the ClickHouse CLI to interact with ClickHouse.
 
@@ -40,7 +41,7 @@ current_database:                      public
 
 ## See query performance stats rather than query result
 
-Queries you run in ClickHouse generate stats about the query performance. There are often multiple ways to write the same query, but each can have different performance characteristics. By analysing the performance stats, it's possible to find the most optimised queries.
+Queries you run in ClickHouse generate stats about the query performance. There are often multiple ways to write the same query, but each can have different performance characteristics. By analyzing the performance stats, it's possible to find the most optimised queries.
 
 You can `FORMAT Null` to run the query and just print the query performance stats.
 

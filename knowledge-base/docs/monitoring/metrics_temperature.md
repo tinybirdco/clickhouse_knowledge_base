@@ -1,18 +1,19 @@
 ---
 id: metrics_temperature
-title: ClickHouse Server Temperature
+title: Get your ClickHouse Server Temperature
+description: Curious to know your ClickHouse server temperature? Here's a query to get your ClickHouse server temperature.
 tags:
   - beginner
   - monitoring
 ---
 
-# ClickHouse Server Temperature
+# Get your ClickHouse Server Temperature
 
-ClickHouse can collect and store system metrics, allowing you to query these metrics as a table.
+ClickHouse collects and stores system metrics, allowing you to query these metrics as a table.
 
-This makes it very easy to hook up your monitoring tools, e.g. Grafana, and visualise metrics about your ClickHouse install.
+This makes it very easy to connect your monitoring tools, like Grafana, and visualise metrics about your ClickHouse install.
 
-Using this, we can monitor our ClickHouse server temperatures.
+Here's a query that lets you monitor your ClickHouse server temperatures.
 
 ```sql
 SELECT *
@@ -39,7 +40,7 @@ Query id: a59f1f17-1c5d-4a32-ad71-581a24ddf178
 12 rows in set. Elapsed: 0.008 sec.
 ```
 
-We can also see the historic values in `system.asynchronous_metric_log`.
+You can also see the historic values in `system.asynchronous_metric_log`. Here's a query that charts average server temperature every 15 minutes with `bar` formatting.
 
 
 ```sql

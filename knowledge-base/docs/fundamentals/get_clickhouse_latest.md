@@ -1,15 +1,16 @@
 ---
 id: get_clickhouse_latest
-title: Getting the latest ClickHouse build
+title: Get the latest ClickHouse build
+description: Want to get the latest ClickHouse build? Here's how to download the latest build to keep up with the many changes to ClickHouse.
 tags:
   - beginner
   - getting-started
 ---
 
-# Getting the latest ClickHouse build
+# Get the latest ClickHouse build
 
 
-ClickHouse development is pretty fast, with hundreds of on-going pull requests and many changes happening daily. If you don't want to build ClickHouse to get the latest changes from HEAD you can simply download the latest build with:
+ClickHouse development happens very quickly, with hundreds of on-going pull requests and many changes happening daily. If you don't want to build ClickHouse to get the latest changes from HEAD you can simply download the latest build with:
 
 
 ```bash
@@ -39,4 +40,4 @@ Query id: 26b5ae47-e866-4912-95dd-156990ff5420
 Mordor :) Bye.
 ```
 
-This way you can test any new feature that hasn't been released yet to provide feedback, verify if bugs are already fixed and so on.
+This way you can test any new feature that hasn't been released yet to provide feedback, verify if bugs are already fixed, and so on.

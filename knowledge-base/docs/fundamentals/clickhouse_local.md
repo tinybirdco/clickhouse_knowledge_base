@@ -1,16 +1,17 @@
 ---
 id: clickhouse_local
-title: Analysing local files with clickhouse-local
+title: Analyze local files with clickhouse-local
+description: Want to explore local files in ClickHouse? Use clickhouse-local to run a temporary ClickHouse instance on your local machine to analyze structured files.
 tags:
   - beginner
   - getting-started
 ---
 
-# Analysing local files with clickhouse-local
+# Analyze local files with clickhouse-local
 
 `clickhouse-local` is like running a temporary ClickHouse server that only lasts for your session. It's great for exploring local files to quickly experiment with data, without needing to set up a proper ClickHouse deployment.
 
-It's possible to use to `clickhouse-local` to analyse files of structured data directly from the local file system. 
+It's possible to use to `clickhouse-local` to analyze files of structured data directly from the local file system. 
 
 ```sql
 SELECT count() FROM file('final.ndjson');

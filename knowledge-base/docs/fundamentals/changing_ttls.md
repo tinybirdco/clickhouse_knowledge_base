@@ -1,12 +1,13 @@
 ---
 id: changing_ttls
-title: Changing table TTLs
+title: Change table TTLs
+description: Want to change table TTLs in ClickHouse? Here's how you can modify the TTL of a table in ClickHouse and avoid impacting performance.
 tags:
   - beginner
   - getting-started
 ---
 
-# Changing table TTLs
+# Change table TTLs
 
 You can modify the TTL of a table in ClickHouse by using `ALTER TABLE...MODIFY TTL`. For example:
 
