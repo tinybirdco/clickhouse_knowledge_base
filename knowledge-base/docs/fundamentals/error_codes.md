@@ -1,12 +1,13 @@
 ---
 id: error_codes
-title: ClickHouse Error Codes
+title: View all ClickHouse error codes
+description: Trying to parse a specific ClickHouse error code? Here's how to view all error codes in ClickHouse.
 tags:
   - beginner
   - getting-started
 ---
 
-# ClickHouse Error Codes
+# View all ClickHouse Error Codes
 
 You can view all of the possible ClickHouse error codes with this query:
 
@@ -25,7 +26,7 @@ WHERE NOT empty(errorCodeToName(number))
 
 ## HTTP Error Codes
 
-When submitting a query over the ClickHouse HTTP interface, any errors are returned in the response header, in a special field called `X-ClickHouse-Exception-Code`.
+When you submit a query over the ClickHouse HTTP interface, any errors are returned in the response header, in a special field called `X-ClickHouse-Exception-Code`.
 
 ```bash
 curl -i 'http://localhost:8123?query=select+*+from+wtf'

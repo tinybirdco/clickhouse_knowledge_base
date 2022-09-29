@@ -1,6 +1,7 @@
 ---
 id: fast_max_min
 title: Speed up ARGMIN and ARGMAX aggregations
+Description: ARGMIN() and ARGMAX are useful ClickHouse functions. Here's how to make them faster to speed up your queries in ClickHouse.
 tags:
   - beginner
   - performance
@@ -8,7 +9,7 @@ tags:
 
 # Speed up ARGMIN and ARGMAX aggregations
 
-ClickHouse currently is not able to use the knowledge of the sort key from a table to speed up aggregations. This means that, to get the `ARGMIN()` or `ARGVMAX()` values from a table it will read all values even if it's sorted by that column:
+ClickHouse currently is not able to use the knowledge of the sort key from a table to speed up aggregations. This means that to get the `ARGMIN()` or `ARGVMAX()` values from a table it will read all values even if it's sorted by that column:
 
 ```sql
 CREATE TABLE myData
@@ -55,7 +56,7 @@ read_bytes: 2200081879
 1 row in set. Elapsed: 0.005 sec. 
 ```
 
-To get the id with the highest value we've read the whole table, in this case 100M elements. But the knowledge of the structure allows us to be more clever:
+To get the id with the highest value, you have to read the whole table, in this case 100M elements. But the knowledge of the structure allows you to be more clever:
 
 ```sql
 SELECT id FROM myData ORDER BY value DESC LIMIT 1;
@@ -91,4 +92,4 @@ read_bytes: 906512
 1 row in set. Elapsed: 0.004 sec.
 ```
 
-In this case ClickHouse knows that it can use the sorting key of the table and read only the first block of data, which is much faster. Beware that this doesn't work exactly the same for some types, specially when dealing with floating point and NaNs, but it can be useful in many other cases.
+In this case ClickHouse knows that it can use the sorting key of the table and read only the first block of data, which is much faster. Beware that this doesn't work exactly the same for some types, especially when dealing with floating point and NaNs, but it can be useful in many other cases.

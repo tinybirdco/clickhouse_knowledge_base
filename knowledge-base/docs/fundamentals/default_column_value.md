@@ -1,14 +1,15 @@
 ---
 id: default_column_value
-title: Adding a default value for new columns
+title: Add a default value for new columns
+description: Want to change the default value for new columns in ClickHouse? Here's how to do just that.
 tags:
   - beginner
   - getting-started
 ---
 
-# Adding a default value for new columns
+# Add a default value for new columns
 
-When adding a new column to a table, ClickHouse will add it with the default value:
+When you add a new column to a table, ClickHouse will add it with the default value:
 
 ```sql
 CREATE TABLE local

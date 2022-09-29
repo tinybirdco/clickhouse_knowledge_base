@@ -1,12 +1,13 @@
 ---
 id: integer_overflows
-title: Handling integer overflows
+title: Handle integer overflows
+description: ClickHouse doesn't perform overflow checks when casting between integer types. Here's how to handle integer overflows in ClickHouse with accurateCast.
 tags:
   - beginner
   - getting-started
 ---
 
-# Handling integer overflows
+# Handle integer overflows
 
 By default, ClickHouse does not perform overflow checks when casting between integer types.
 
@@ -36,7 +37,7 @@ Query id: ca8d0576-0946-4506-b021-1daa171e3357
 1 row in set. Elapsed: 0.000 sec.
 ```
 
-Although this behaviour might be understandable for people with knowledge of the underlying architecture, it might be undesired in many cases. If you would rather get an exception you can use the `accurateCast` function.
+Although people with knowledge of the underlying architecture might understand this behavior, it might not be desirable in many cases. If you would rather get an exception you can use the `accurateCast` function.
 
 ```sql
 SELECT accurateCast(100, 'Int8');
