@@ -1,5 +1,5 @@
 ---
-id: metrics_visualise_flamegraph
+id: metrics_visualize_flamegraph
 title: Visualize stack traces with flamegraphs
 description: Flamegraphs are a great way to visualize metrics from stack traces. Here's how to use flamegraphs to visualize ClickHouse stack traces.
 tags:
@@ -68,7 +68,7 @@ WHERE event_time >= now() - INTERVAL 5 MINUTE
 GROUP BY full_trace 
 ```
 
-Download the [Flamegraph visualiser](https://github.com/brendangregg/FlameGraph).
+Download the [Flamegraph visualizer](https://github.com/brendangregg/FlameGraph).
 
 You can use the CLI to run the query and pipe the output to the `flamegraph.pl` script:
 
