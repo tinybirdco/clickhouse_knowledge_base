@@ -3,7 +3,7 @@ slug: /
 sidebar_position: 1
 title: ClickHouse Knowledge Base
 description: Looking for ClickHouse info? Check out this ClickHouse knowledge base, full of ClickHouse tips you won't find in the official docs.
-keywords: clickhouse, docs, guides, knowledge base
+keywords: [clickhouse, docs, guides, knowledge base]
 ---
 
 
