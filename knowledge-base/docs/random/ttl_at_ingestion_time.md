@@ -1,13 +1,13 @@
 ---
 id: ttl_at_ingestion_time
-title: Controlling TTL at ingestion time
-Description: 
+title: Control TTL at ingestion time
+Description: Want to set a TTL on a table in ClickHouse? Here's how to control the TTL at ingestion time based on a date column.
 tags:
   - beginner
   - random
 ---
 
-# Controlling TTL at ingestion time
+# Control TTL at ingestion time
 
 The TTL of a table can be an expression that references one or more columns; this means that the TTL for a given row will be calculated at the point of ingestion.
 

@@ -1,7 +1,7 @@
 ---
 id: show_server_logs_cli
-title: Showing logs in the CLI
-description: 
+title: Show logs in the CLI
+description: Trying to debug a problem with your ClickHouse query, but having trouble filtering through the log file? Here's how to show logs in the CLI to reduce noise when debugging ClickHouse.
 tags:
   - beginner
   - getting-started
@@ -9,7 +9,7 @@ tags:
 
 # Showing logs in the CLI
 
-When you're trying to debug a problem with a query, it can be useful to see the logs. However, it can be very difficult to find the relevent logs in the log file becuase the log file contains logs for all server operations & queries, creating a lot of noise.
+When you're trying to debug a problem with a query, you might want to see the logs. However, there's a lot of noise in the log file, because the log file contains logs for all server operations & queries, making it difficult to find the logs you want in the log file.
 
 To make this easier, you can instruct the CLI to display logs inside the terminal session, showing you only the logs related to your query.
 

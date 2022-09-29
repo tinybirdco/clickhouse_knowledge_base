@@ -1,13 +1,13 @@
 ---
-id: analyse_concurrent_queries
-title: Analysing concurrent queries
-description: 
+id: analyze_concurrent_queries
+title: Analyze concurrent queries
+description: Getting the TOO_MANY_SIMULTANEOUS_QUERIES error in ClickHouse? Here's how to analyze which queries are throttling your ClickHouse instance.
 tags:
   - beginner
   - monitoring
 ---
 
-# Analysing concurrent queries
+# Analyze concurrent queries
 
 ClickHouse can proccess multiple queries concurrently, but performance is affected, and, in the worst case, you may hit the dreaded TOO_MANY_SIMULTANEOUS_QUERIES error. This happens when ClickHouse has reached the maximum amount of simulatenous queries and you send another request before at least one is finished. One way to avoid this issue is to optimize the queries, but to do that, you'll need to know which ones are responsible for the problem.
 

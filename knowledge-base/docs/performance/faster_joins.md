@@ -1,15 +1,15 @@
 ---
 id: faster_joins
-title: Faster joins
-Description: 
+title: Make joins faster by moving your filter
+description: Want to speed up your joins in ClickHouse? Here is a smart approach to improving ClickHouse join speed by applying your filters earlier in a subquery.
 tags:
   - beginner
   - performance
 ---
 
-# Faster joins
+# Make joins faster by moving your filter
 
-The key to making your joins faster is to apply your filter as soon as possible.
+The key to making your joins faster in ClickHouse is to apply your filter as soon as possible.
 
 For example, take the following query, which applies a LEFT JOIN with a WHERE clause.
 
