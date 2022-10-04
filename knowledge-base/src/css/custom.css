@@ -117,13 +117,13 @@ html {
 
 
 @media (min-width: 997px) {
-  .menu_node_modules-\@docusaurus-theme-classic-lib-theme-DocSidebar-Desktop-Content-styles-module {
+  .menu {
     flex-grow: 1;
     padding: 1.5rem 0.75rem !important; 
   }
 
   @supports (scrollbar-gutter: stable) {
-    .menu_node_modules-\@docusaurus-theme-classic-lib-theme-DocSidebar-Desktop-Content-styles-module {
+    .menu {
       padding: 1.5rem 0.75rem !important;
       scrollbar-gutter: stable;
     }
@@ -162,7 +162,7 @@ html {
 */
 
 @media (min-width: 997px) {
-  .docMainContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocPage-Layout-Main-styles-module {
+  [class*="docMainContainer"] {
     padding-left: 2rem;
     padding-right: 1rem;
     padding-top: 1rem;
@@ -173,12 +173,12 @@ html {
 * Breadcrumbs
 */
 
-.breadcrumbsContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocBreadcrumbs-styles-module {
+.theme-doc-breadcrumbs {
   margin-left: -0.5rem;
 }
 
 @media (min-width: 997px) {
-  .breadcrumbsContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocBreadcrumbs-styles-module {
+  .theme-doc-breadcrumbs {
     margin-bottom: 1.5rem;
   }
 }
@@ -194,8 +194,8 @@ html {
 * Markdown
 */
 
-.markdown h1:first-child,
-.title_node_modules-\@docusaurus-theme-classic-lib-theme-DocCategoryGeneratedIndexPage-styles-module {
+[class*="generatedIndexPage"] [class*="title"],
+.markdown h1:first-child {
   --ifm-h1-font-size: 2.25rem !important;
   line-height: 1.22;
   letter-spacing: -0.02rem;
@@ -254,25 +254,25 @@ html {
 * Cards
 */
 
-.cardContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocCard-styles-module {
+[class*="cardContainer"] {
   height: 100%;
   background-color: white;
   box-shadow: 0 0 0 0 rgb(0 0 0 / 10%) !important;
 }
 
-.cardContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocCard-styles-module:hover {
+[class*="cardContainer"]:hover {
   border-color: #FFD600 !important;
   box-shadow: 0 3px 6px 0 rgb(0 0 0 / 10%) !important;
 }
 
 
-.cardTitle_node_modules-\@docusaurus-theme-classic-lib-theme-DocCard-styles-module {
+[class*="cardTitle"] {
   overflow: visible !important;
   white-space: normal !important;
   font-weight: 600;
 }
 
-.cardContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocCard-styles-module *:last-child {
+[class*="cardContainer"] *:last-child {
   font-size: 0.875rem;
   overflow: visible !important;
   white-space: normal !important;
