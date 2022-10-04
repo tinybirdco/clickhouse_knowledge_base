@@ -4,49 +4,295 @@
  * work well for content-centric websites.
  */
 
-@import url('https://rsms.me/inter/inter.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap');
 
 html {
   font-family: 'Inter', sans-serif;
 }
 
-@supports (font-variation-settings: normal) {
-  html {
-    font-family: 'Inter var', sans-serif;
-  }
-}
+/*
+* Global variables
+*/
 
-/* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
+  /* Color palette */
+  --ifm-color-primary: #232323;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
   --ifm-color-primary-darkest: #205d3b;
   --ifm-color-primary-light: #33925d;
   --ifm-color-primary-lighter: #359962;
   --ifm-color-primary-lightest: #3cad6e;
+
+  /* Font variables */
+  --ifm-font-family-base: Inter, sans-serif;
   --ifm-code-font-size: 95%;
+  --ifm-font-color-base: #666;
+  --ifm-font-weight-semibold: 500;
+  --ifm-font-weight-bold: 800;
+
+  /* Content */
+  --ifm-heading-color: #232323;
+
+  /* Theme colors */
+  --ifm-background-color: #fffef9;
+  --ifm-background-surface-color: #fffef9;
+
+  /* Navbar */
+  --ifm-navbar-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1); 
+
+  /* Menu */
+  --ifm-menu-color: var(--ifm-font-color-base);
+
+  /* Code blocks */
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --ifm-font-family-base: Inter, sans-serif;
+
+  /* Footer */
+  --ifm-footer-background-color: #fffef9;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  --ifm-font-family-base: Inter, sans-serif;
+/*
+* Navbar
+*/
+
+.navbar {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-.footer {
-  text-align: center;
+@media (min-width: 997px) {
+  .navbar {
+    padding-left: 1.75rem;
+    padding-right: 1rem;
+  }
+}
+
+.navbar__brand {
+  align-items: center;
+}
+
+.navbar__logo {
+  height: 1.5rem;
+  margin-right: 0.75rem;
+}
+
+@media (min-width: 997px) {
+  .navbar__logo {
+    margin-right: 0.75rem;
+  }
+}
+
+.navbar__logo img {
+  height: 1.5rem;
 }
 
 .navbar__title {
+  font-weight: var(--ifm-font-weight-bold);
+  color: var(--ifm-color-primary);
+}
+
+.navbar__link {
+  font-size: 0.9375rem;
+  font-weight: var(--ifm-font-weight-normal);
+}
+
+.navbar__toggle {
+  padding: 0.25rem;
+}
+
+.navbar__toggle svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.by-tinybird {
+  font-size: 0.9375rem;
+  margin-left: -12px;
+  display: block;
+}
+
+/*
+* Sidebar
+*/
+
+
+@media (min-width: 997px) {
+  .menu_node_modules-\@docusaurus-theme-classic-lib-theme-DocSidebar-Desktop-Content-styles-module {
+    flex-grow: 1;
+    padding: 1.5rem 0.75rem !important; 
+  }
+
+  @supports (scrollbar-gutter: stable) {
+    .menu_node_modules-\@docusaurus-theme-classic-lib-theme-DocSidebar-Desktop-Content-styles-module {
+      padding: 1.5rem 0.75rem !important;
+      scrollbar-gutter: stable;
+    }
+  } 
+}
+
+.menu__link {
+  font-size: 0.875em;
+  font-weight: var(--ifm-font-weight-normal);
+  line-height: 1.5;
+}
+
+@media (min-width: 997px) {
+  .menu__link {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.menu__link:hover {
+  text-decoration: none;
+  color: var(--ifm-menu-color);
+}
+
+.menu__link.menu__link--active {
+  font-weight: var(--ifm-font-weight-semibold);
+  color: var(--ifm-heading-color);
+}
+
+.menu__caret:before {
+  background: var(--ifm-menu-link-sublist-icon) 50% / 1.25rem 1.25rem;
+}
+
+/*
+* Main section
+*/
+
+@media (min-width: 997px) {
+  .docMainContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocPage-Layout-Main-styles-module {
+    padding-left: 2rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+  }
+}
+
+/*
+* Breadcrumbs
+*/
+
+.breadcrumbsContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocBreadcrumbs-styles-module {
+  margin-left: -0.5rem;
+}
+
+@media (min-width: 997px) {
+  .breadcrumbsContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocBreadcrumbs-styles-module {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.breadcrumbs__item--active .breadcrumbs__link {
+  background: transparent;
+  border: 1px solid #FFD600;
+  color: var(--ifm-breadcrumb-color-active);
+}
+
+
+/*
+* Markdown
+*/
+
+.markdown h1:first-child,
+.title_node_modules-\@docusaurus-theme-classic-lib-theme-DocCategoryGeneratedIndexPage-styles-module {
+  --ifm-h1-font-size: 2.25rem !important;
+  line-height: 1.22;
+  letter-spacing: -0.02rem;
+  margin-bottom: 1.5rem;
+}
+
+.markdown h1:not(:first-child) {
+  margin-top: calc(var(--ifm-h1-vertical-rhythm-top) * var(--ifm-leading));
+}
+
+.markdown > h2 {
+  --ifm-h2-font-size: 1.5rem;
+  margin-bottom: calc( var(--ifm-heading-vertical-rhythm-bottom) * var(--ifm-leading) );
+  margin-top: calc(var(--ifm-h2-vertical-rhythm-top) * var(--ifm-leading));
+}
+
+.markdown > pre, .markdown > ul, .markdown > p {
+  margin-bottom: 1rem;
+  line-height: 1.625;
+}
+
+/*
+* TOC
+*/
+
+.table-of-contents__link.table-of-contents__link--active {
+  color: var(--ifm-heading-color);
   font-weight: 500;
+}
+
+/*
+* Tags
+*/
+
+.tagRegular_node_modules-\@docusaurus-theme-classic-lib-theme-Tag-styles-module:hover {
+  border-color: #FFD600;
+}
+
+/*
+* Pagination
+*/
+
+.pagination-nav__link:hover {
+  border-color: #FFD600;
+}
+
+.pagination-nav__sublabel {
+  font-weight: var(--ifm-font-weight-normal);
+}
+
+.pagination-nav__label {
+  font-weight: var(--ifm-font-weight-semibold);
+}
+
+/*
+* Cards
+*/
+
+.cardContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocCard-styles-module {
+  height: 100%;
+  background-color: white;
+  box-shadow: 0 0 0 0 rgb(0 0 0 / 10%) !important;
+}
+
+.cardContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocCard-styles-module:hover {
+  border-color: #FFD600 !important;
+  box-shadow: 0 3px 6px 0 rgb(0 0 0 / 10%) !important;
+}
+
+
+.cardTitle_node_modules-\@docusaurus-theme-classic-lib-theme-DocCard-styles-module {
+  overflow: visible !important;
+  white-space: normal !important;
+  font-weight: 600;
+}
+
+.cardContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocCard-styles-module *:last-child {
+  font-size: 0.875rem;
+  overflow: visible !important;
+  white-space: normal !important;
+}
+
+/*
+* Footer
+*/
+
+.footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.footer__link-item,
+.footer__copyright {
+  font-size: 0.875rem;
+}
+
+/* Hide SearchBox */
+.searchBox_node_modules-\@docusaurus-theme-classic-lib-theme-Navbar-Search-styles-module {
+  display: none;
 }

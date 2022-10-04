@@ -11,7 +11,7 @@ const config = {
   url: 'https://tinybird.co/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenMarkdownLinks: 'throw',
   favicon: 'img/favicon.ico',
   organizationName: 'tinybirdco',
   projectName: 'clickhouse-knowledge-base',
@@ -41,16 +41,22 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       colorMode: {
-        defaultMode: 'dark',
-        disableSwitch: false,
+        defaultMode: 'light',
+        disableSwitch: true,
+        respectPrefersColorScheme: false,
       },
       navbar: {
         title: 'ClickHouse Knowledge Base',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo_green.png',
+          alt: 'ClickHouse Knowledge Base Logo',
+          src: 'img/clickhouse-kb-logo.svg',
         },
         items: [
+          {
+            type: 'html',
+            position: 'left',
+            value: '<span class="by-tinybird">by tinybird</span>',
+          },
           {
             href: 'https://github.com/tinybirdco/clickhouse-knowledge-base',
             label: 'GitHub',
@@ -59,61 +65,37 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
-        logo: {
-          alt: 'Meta Open Source Logo',
-          src: 'img/logo_green.png',
-          href: 'https://tinybird.co',
-          width: 150,
-          height: 150,
-        },
         links: [
           {
-            title: 'ClickHouse',
-            items: [
-              {
-                label: 'GitHub',
-                href: 'https://github.com/ClickHouse/ClickHouse',
-              },
-              {
-                label: 'StackOverflow',
-                href: 'https://stackoverflow.com/questions/tagged/clickhouse',
-              },
-            ],
+            label: 'GitHub',
+            href: 'https://github.com/ClickHouse/ClickHouse',
           },
           {
-            title: 'Community',
-            items: [
-              {
-                label: 'Slack',
-                href: 'https://www.tinybird.co/join-our-slack-community',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/tinybirdco',
-              },
-            ],
+            label: 'StackOverflow',
+            href: 'https://stackoverflow.com/questions/tagged/clickhouse',
           },
           {
-            title: 'Tinybird',
-            items: [
-              {
-                label: 'Blog',
-                href: 'https://www.tinybird.co/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/tinybirdco',
-              },
-            ],
+            label: 'Slack',
+            href: 'https://www.tinybird.co/join-our-slack-community',
+          },
+          {
+            label: 'Twitter',
+            href: 'https://twitter.com/tinybirdco',
+          },
+          {
+            label: 'Blog',
+            href: 'https://www.tinybird.co/blog',
+          },
+          {
+            label: 'GitHub',
+            href: 'https://github.com/tinybirdco',
           },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Tinybird.
         ClickHouse® is a registered trademark of ClickHouse, Inc. All Rights Reserved`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: require('./custom-code-theme'),
       },
     }),
 };
