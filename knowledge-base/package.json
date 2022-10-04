@@ -1,5 +1,5 @@
 {
-  "name": "knowledge-base",
+  "name": "clickhouse-knowledge-base",
   "version": "0.0.0",
   "private": true,
   "scripts": {
