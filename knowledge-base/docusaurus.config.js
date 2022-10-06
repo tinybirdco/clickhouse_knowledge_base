@@ -48,7 +48,7 @@ const config = {
       announcementBar: {
         id: 'try_tinybird',
         content:
-          '<span style="color: #FFD600;"><strong>Like ClickHouse but hate complexity?</strong></span> <span>Try <a href="https://www.tinybird.co">Tinybird</a> - a managed ClickHouse for devs who want to build faster.</span>',
+          '<strong>Like ClickHouse but hate complexity?</strong> Try <a href="https://www.tinybird.co">Tinybird</a> - a managed ClickHouse for devs who want to build faster.',
         backgroundColor: '#25283d',
         textColor: '#ffffff',
         isCloseable: false,
