@@ -4,12 +4,14 @@ Welcome to the ClickHouse® Knowledge Base, curated with love by [Tinybird](http
 
 This information can be used with any standard ClickHouse® install.
 
-## Get ClickHouse in your feed
-Follow [@ClickHouseTips](https://twitter.com/ClickHouseTips) for a daily drip.
+## About this Knowledge Base
+This Knowledge Base was created with love and maintained by the team at [Tinybird](https://www.tinybird.co). Tinybird uses ClickHouse under the hood, we've learned alot about it over the years, and we wanted to start sharing our knowledge with the ClickHouse community.
 
-## Love ClickHouse, but not the complexity?
+If you have extensive ClickHouse experience, and want to contribute tips of your own, please do!
 
-[Tinybird](https://tinybird.co) is a managed, serverless ClickHouse for developers; never worry about infrastructure, scale, or integration. Ingest data directly over HTTPS, from Kafka, or from your Warehouse; write your logic in SQL; and publish the result of your SQL as REST APIs at the click of a button. [You can use Tinybird for free, with no time limit.](https://tinybird.co)
+## Want to contribute?
+
+We welcome contributions from the broader ClickHouse community. Please read [this](https://github.com/tinybirdco/clickhouse_knowledge_base/blob/main/CONTRIBUTING.md) for guidelines on how to contribute.
 
 ## Development
 
