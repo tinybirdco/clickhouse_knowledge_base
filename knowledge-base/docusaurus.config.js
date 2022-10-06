@@ -45,6 +45,14 @@ const config = {
         disableSwitch: true,
         respectPrefersColorScheme: false,
       },
+      announcementBar: {
+        id: 'try_tinybird',
+        content:
+          '<strong>Like ClickHouse but hate complexity?</strong> Try <a href="https://www.tinybird.co">Tinybird</a> - a managed ClickHouse for devs who want to build faster.',
+        backgroundColor: '#25283d',
+        textColor: '#ffffff',
+        isCloseable: false,
+      },
       navbar: {
         title: 'ClickHouse Knowledge Base',
         logo: {
@@ -71,12 +79,12 @@ const config = {
             href: 'https://www.tinybird.co/join-our-slack-community',
           },
           {
-            label: 'Follow us on Twitter',
+            label: 'Daily Tips on Twitter',
             href: 'https://twitter.com/ClickHouseTips',
           },
           {
-            label: 'GitHub',
-            href: 'https://github.com/tinybirdco/clickhouse_knowledge_base',
+            label: 'Tinybird GitHub',
+            href: 'https://github.com/tinybirdco',
           },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Tinybird.
