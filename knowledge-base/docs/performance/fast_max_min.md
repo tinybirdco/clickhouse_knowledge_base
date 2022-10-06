@@ -9,7 +9,7 @@ tags:
 
 # Speed up ARGMIN and ARGMAX aggregations
 
-ClickHouse currently is not able to use the knowledge of the sort key from a table to speed up aggregations. This means that to get the `ARGMIN()` or `ARGVMAX()` values from a table it will read all values even if it's sorted by that column:
+ClickHouse currently is not able to use the knowledge of the sort key from a table to speed up aggregations. This means that to get the `ARGMIN()` or `ARGMAX()` values from a table it will read all values even if it's sorted by that column:
 
 ```sql
 CREATE TABLE myData
