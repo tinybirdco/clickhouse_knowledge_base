@@ -68,15 +68,15 @@ const config = {
         links: [
           {
             label: 'Join us on Slack',
-            href: 'https://github.com/ClickHouse/ClickHouse',
+            href: 'https://www.tinybird.co/join-our-slack-community',
           },
           {
             label: 'Follow us on Twitter',
-            href: 'https://stackoverflow.com/questions/tagged/clickhouse',
+            href: 'https://twitter.com/ClickHouseTips',
           },
           {
             label: 'GitHub',
-            href: 'https://www.tinybird.co/join-our-slack-community',
+            href: 'https://github.com/tinybirdco/clickhouse_knowledge_base',
           },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Tinybird.

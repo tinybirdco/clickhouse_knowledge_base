@@ -30,7 +30,6 @@
   flex-shrink: 0;
   display: flex;
   align-items: center;
-  flex-shrink: 0;
 }
 
 .logo {
@@ -51,7 +50,7 @@
 
 .links {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   flex-shrink: 0;
 }
 
@@ -60,7 +59,6 @@
   padding-left: 0;
   list-style: none;
   margin-bottom: 0;
-  
   flex-direction: column;
 }
 
