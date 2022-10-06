@@ -14,7 +14,7 @@ const config = {
   onBrokenMarkdownLinks: 'throw',
   favicon: 'img/favicon.ico',
   organizationName: 'tinybirdco',
-  projectName: 'clickhouse-knowledge-base',
+  projectName: 'clickhouse_knowledge_base',
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -58,7 +58,7 @@ const config = {
             position: 'right',
           },
           {
-            href: 'https://github.com/tinybirdco/clickhouse-knowledge-base',
+            href: 'https://github.com/tinybirdco/clickhouse_knowledge_base',
             label: 'GitHub',
             position: 'right',
           },
