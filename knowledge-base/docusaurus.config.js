@@ -53,9 +53,9 @@ const config = {
         },
         items: [
           {
-            type: 'html',
-            position: 'left',
-            value: '<span class="by-tinybird">by tinybird</span>',
+            href: 'https://www.tinybird.co',
+            label: 'Tinybird',
+            position: 'right',
           },
           {
             href: 'https://github.com/tinybirdco/clickhouse-knowledge-base',
@@ -67,28 +67,16 @@ const config = {
       footer: {
         links: [
           {
-            label: 'GitHub',
+            label: 'Join us on Slack',
             href: 'https://github.com/ClickHouse/ClickHouse',
           },
           {
-            label: 'StackOverflow',
+            label: 'Follow us on Twitter',
             href: 'https://stackoverflow.com/questions/tagged/clickhouse',
           },
           {
-            label: 'Slack',
-            href: 'https://www.tinybird.co/join-our-slack-community',
-          },
-          {
-            label: 'Twitter',
-            href: 'https://twitter.com/tinybirdco',
-          },
-          {
-            label: 'Blog',
-            href: 'https://www.tinybird.co/blog',
-          },
-          {
             label: 'GitHub',
-            href: 'https://github.com/tinybirdco',
+            href: 'https://www.tinybird.co/join-our-slack-community',
           },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Tinybird.

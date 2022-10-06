@@ -23,11 +23,12 @@ html {
   --ifm-color-primary-light: #33925d;
   --ifm-color-primary-lighter: #359962;
   --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-content-secondary: #7E7D76;
 
   /* Font variables */
   --ifm-font-family-base: Inter, sans-serif;
   --ifm-code-font-size: 95%;
-  --ifm-font-color-base: #666;
+  --ifm-font-color-base: #4f492e;
   --ifm-font-weight-semibold: 500;
   --ifm-font-weight-bold: 800;
 
@@ -49,6 +50,7 @@ html {
 
   /* Footer */
   --ifm-footer-background-color: #fffef9;
+  --ifm-footer-link-color: var(--ifm-font-color-base);
 }
 
 /*
@@ -217,13 +219,26 @@ html {
   line-height: 1.625;
 }
 
+.markdown p a {
+  text-underline-offset: 4px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  color: inherit;
+  transition: 0.2s ease-out color, 0.2s ease-out border-bottom-color;
+}
+
+.markdown p a:hover {
+  text-decoration: none;
+  color: var(--ifm-heading-color);
+  border-bottom: 1px solid var(--ifm-font-color-base);
+}
+
 /*
 * TOC
 */
 
 .table-of-contents__link.table-of-contents__link--active {
   color: var(--ifm-heading-color);
-  font-weight: 500;
+  font-weight: var(--ifm-font-weight-semibold);
 }
 
 /*
@@ -276,20 +291,6 @@ html {
   font-size: 0.875rem;
   overflow: visible !important;
   white-space: normal !important;
-}
-
-/*
-* Footer
-*/
-
-.footer {
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.footer__link-item,
-.footer__copyright {
-  font-size: 0.875rem;
 }
 
 /* Hide SearchBox */

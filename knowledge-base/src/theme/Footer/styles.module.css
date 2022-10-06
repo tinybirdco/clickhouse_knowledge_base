@@ -1,0 +1,181 @@
+.footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 2rem 1rem 2rem; 
+  font-size: 0.875rem;
+  color: var(--ifm-color-content-secondary);
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  flex-wrap: wrap;
+  row-gap: 16px;
+}
+
+.row > * {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.copyright {
+  flex-grow: 1;
+  padding-left: 1rem;
+  flex-shrink: 0;
+}
+
+.brand {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.75rem;
+}
+
+.brandLink {
+  font-weight: var(--ifm-font-weight-semibold);
+}
+
+.logo svg path {
+  color: #666564;
+}
+
+.links {
+  display: flex;
+  justify-content: end;
+  flex-shrink: 0;
+}
+
+.list {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 0;
+  
+  flex-direction: column;
+}
+
+.item {
+  position: relative;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.link {
+  color: inherit;
+}
+
+@media (min-width: 420px) {
+  .list {
+    flex-direction: row;
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+
+  .item {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .item::after {
+    content: "・";
+    display: inline-block;
+    position: absolute;
+    transform: translateX(0.5rem);
+  }
+
+  .item:last-child::after {
+    content: "";
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .row {
+    flex-direction: row;
+  }
+
+  .copyright {
+    order: 1;
+  }
+
+
+  .links {
+    width: 50%;
+    justify-content: flex-start;
+  }
+
+  .item {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 997px) {
+  .footer {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+  }
+
+  .row {
+    flex-wrap: nowrap;
+  }
+
+  .brand {
+    width: auto;
+    flex-shrink: 0;
+  }
+
+  .copyright {
+    padding-left: 2rem;
+    order: initial;
+    flex-shrink: 1;
+    width: auto ;
+  }
+
+  .links {
+    width: auto;
+    padding-left: 2rem;
+  }
+}
+
+@media (min-width: 1240px) {
+  .brand {
+    width: auto;
+    width: 288px;
+    flex-shrink: 0;
+  }
+
+  .copyright {
+    padding-left: 3rem;
+  }
+
+  .links {
+    padding-left: 2rem;
+  }
+}
+
+
+@media (min-width: 1580px) {
+  .brand {
+    width: 25%;
+  }
+
+  .links {
+    width: 25%;
+    padding-left: 16px;
+  }
+  
+  .copyright {
+    width: 50%;
+    padding-left: 1rem;
+    text-align: center;
+  }
+}
