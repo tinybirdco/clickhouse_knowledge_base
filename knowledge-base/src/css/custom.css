@@ -291,6 +291,16 @@ html {
 }
 
 /*
+* Content Alert
+*/
+
+.alert {
+  box-shadow: none;
+  border-width: 1px;
+  border-color: rgb(135, 216, 242, 0.6);
+}
+
+/*
 * TOC
 */
 
