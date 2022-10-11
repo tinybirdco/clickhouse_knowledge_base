@@ -51,6 +51,10 @@ html {
   /* Footer */
   --ifm-footer-background-color: #fffef9;
   --ifm-footer-link-color: var(--ifm-font-color-base);
+
+  /* Icons */
+  --ifm-menu-link-sublist-icon: url('data:image/svg+xml,%3Csvg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M4.70001 9.88997C4.82494 10.0141 4.99387 10.0838 5.17001 10.0838C5.34614 10.0838 5.51507 10.0141 5.64001 9.88997L8.03334 7.52997L10.3933 9.88997C10.5182 10.0141 10.6872 10.0838 10.8633 10.0838C11.0395 10.0838 11.2084 10.0141 11.3333 9.88997C11.3958 9.82799 11.4454 9.75426 11.4793 9.67302C11.5131 9.59178 11.5305 9.50464 11.5305 9.41663C11.5305 9.32863 11.5131 9.2415 11.4793 9.16023C11.4454 9.07903 11.3958 9.0053 11.3333 8.9433L8.50667 6.11663C8.44467 6.05417 8.37094 6.00457 8.28974 5.9707C8.20847 5.93683 8.12134 5.91943 8.03334 5.91943C7.94534 5.91943 7.85821 5.93683 7.77694 5.9707C7.69574 6.00457 7.62201 6.05417 7.56001 6.11663L4.70001 8.9433C4.63754 9.0053 4.58794 9.07903 4.55407 9.16023C4.52021 9.2415 4.50281 9.32863 4.50281 9.41663C4.50281 9.50464 4.52021 9.59178 4.55407 9.67302C4.58794 9.75426 4.63754 9.82799 4.70001 9.88997Z" fill="%234f492e"/%3E%3C/svg%3E%0A');;
+  --ifm-breadcrumb-separator: url('data:image/svg+xml,%3Csvg width="16" height="16" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M6.128 4.685a.667.667 0 0 0 0 .94l2.36 2.393-2.36 2.36a.667.667 0 1 0 .947.94l2.827-2.826a.669.669 0 0 0 0-.947l-2.827-2.86a.668.668 0 0 0-.947 0Z" fill="%23232323"/%3E%3C/svg%3E');
 }
 
 [class*="announcementBarContent"] strong {
@@ -223,6 +227,26 @@ html {
   background: transparent;
   border: 1px solid #FFD600;
   color: var(--ifm-breadcrumb-color-active);
+}
+
+.breadcrumbs__link[aria-label="Home page"] svg {
+  opacity: 0.75;
+  transition-property: opacity;
+  transition-duration: var(--ifm-transition-fast);
+  transition-timing-function: var(--ifm-transition-timing-default);
+}
+
+.breadcrumbs__link[aria-label="Home page"]:hover svg {
+  opacity: 1;
+}
+
+.breadcrumbs__item:not(:last-child):after {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+.breadcrumbs__item:nth-last-child(2):after {
+  margin-right: 0.75rem !important;
 }
 
 
