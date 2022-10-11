@@ -1,7 +1,7 @@
 import React from 'react';
 import {useThemeConfig} from '@docusaurus/theme-common';
 import styles from './styles.module.css';
-import Logo from '@site/static/img/tinybird.svg';
+import Logo from '@site/static/img/tinybird-isotype-heart.svg';
 function Footer() {
   const {footer} = useThemeConfig();
   if (!footer) {
