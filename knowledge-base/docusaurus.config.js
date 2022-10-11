@@ -45,6 +45,10 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadata: [{
+        property: 'og:image',
+        content: 'https://uploads-ssl.webflow.com/6048c50adefe73fe3bc6c51b/6345599dd11b29b55bc11a57_clickhouse_kb_1200x630.jpg'
+      }],
       colorMode: {
         defaultMode: 'light',
         disableSwitch: true,
