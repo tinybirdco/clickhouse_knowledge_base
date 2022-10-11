@@ -1,7 +1,7 @@
 ---
 id: clickhouse_to_markdown
 title: Export query results to Markdown table
-description: 
+description: Want to post your ClickHouse query results online? Here's how to export your ClickHouse query results to a Markdown table.
 tags:
   - beginner
   - random
@@ -43,13 +43,13 @@ First, you must create a table template, which is used to display the entire res
 ${data}
 ```
 
-Next, we create a row template, which is used to display each individual row of the result set. Save this as `/tmp/row.format`.
+Next, create a row template, which is used to display each individual row of the result set. Save this as `/tmp/row.format`.
 
 ```
 |${number:CSV}|${date:CSV}|
 ```
 
-Finally, to export the results into a Markdown file using our templates, we can use the following query:
+Finally, to export the results into a Markdown file using your templates, use the following query:
 
 ```sql
 SELECT
@@ -63,7 +63,7 @@ format_template_row = '/tmp/row.format',
 format_template_rows_between_delimiter = '';
 ```
 
-The contents of our output file will look like this:
+The contents of your output file will look like this:
 
 ```markdown
 |number|date|

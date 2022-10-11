@@ -1,15 +1,15 @@
 ---
 id: select_from_part
-title: Query a specific part/partition
-description:
+title: Query a specific part or partition
+description: Want to query from a specific part or partition of a ClickHouse table? Here's how to use ClickHouse virtual columns to do so.
 tags:
   - intermediate
   - getting-started
 ---
 
-# Query a specific part/partition
+# Query a specific part or partition
 
-If you want to run a query over data from a specific part or partition, ClickHouse has virtual columns, `_part` and `_partition_id`, you can use.
+If you want to run a query over data from a specific part or partition, ClickHouse has virtual columns `_part` and `_partition_id` that you can use.
 
 ## Query from a specific part
 

@@ -1,7 +1,7 @@
 ---
 id: monitor_server_errors
 title: Monitor for server errors
-description:
+description: Wondering how to monitor your ClickHouse server for new errors? Use the system.errors table to track all errors since the server started.
 tags:
   - beginner
   - getting-started
@@ -11,7 +11,7 @@ tags:
 
 You can use the `system.errors` table to see all errors that have occured since the ClickHouse server started.
 
-This can be used for monitoring, and is also particularly useful in a CI process to discover if your changes have introduced new errors.
+This can be used for monitoring, and is also particularly helpful in a CI process to discover if your changes have introduced new errors.
 
 ```sql
 SELECT *

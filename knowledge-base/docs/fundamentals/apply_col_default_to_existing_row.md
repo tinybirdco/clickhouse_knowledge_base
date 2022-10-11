@@ -1,7 +1,7 @@
 ---
 id: apply_col_default_to_existing_row
 title: Apply column default to existing rows
-description:
+description: Want to apply a default value to existing rows in a ClickHouse table column? Here's how to do that with MATERIALIZE.
 tags:
   - beginner
   - getting-started
@@ -26,7 +26,7 @@ SELECT
 FROM numbers(10)
 ```
 
-However, you will often find that, in the future, you now want to modify this column to remove `Nullable` and insert a default value instead of nulls.
+However, you will often find that you eventually want to modify this column to remove `Nullable` and insert a default value instead of nulls.
 
 ```sql
 ALTER TABLE deleteme MODIFY COLUMN `date` DEFAULT now()
@@ -44,7 +44,7 @@ LIMIT 1;
 └────────┴──────┘
 ```
 
-In order to apply the new default value to existing rows, we can use `MATERIALIZE`.
+To apply the new default value to existing rows, you can use `MATERIALIZE`.
 
 ```sql
 ALTER TABLE deleteme

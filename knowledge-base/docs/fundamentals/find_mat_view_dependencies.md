@@ -1,15 +1,15 @@
 ---
 id: find_mat_view_dependencies
-title: Find Materialised View dependencies
-description:
+title: Find Materialized View dependencies
+description: If you change a table in ClickHouse, it can affect Materialized Views that depend on it. Here's how to find all MV dependencies for your ClickHouse table.
 tags:
   - intermediate
   - getting-started
 ---
 
-# Find Materialised View dependencies
+# Find Materialized View dependencies
 
-If you need to perform changes on a table, it can be very useful to know what Materialised Views depend on this table, so you can assess the impact of your changes.
+If you need to perform changes on a table, you'll want to know what Materialized Views depend on this table so you can assess the impact of your changes.
 
 For example, let's say you have the following database structure:
 
@@ -37,9 +37,9 @@ GROUP BY
     key;
 ```
 
-If you want to perform changes on the table `deleteme_alrocar.deleteme_landing`, it would be useful to know if there any Materialised Views that depend on this table, without going one by one through them all.
+If you want to perform changes on the table `deleteme_alrocar.deleteme_landing`, it would be useful to know if there any Materialized Views that depend on this table without going through them all one by one.
 
-We can use the following query to find all Materialised Views that depends on `deleteme_alrocar.deleteme_landing`:
+You can use the following query to find all Materialized Views that depend on `deleteme_alrocar.deleteme_landing`:
 
 ```sql
 SELECT

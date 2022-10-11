@@ -1,7 +1,7 @@
 ---
 id: parse_json_array
 title: Parse an array of JSON objects
-description:
+description: ClickHouse has functions to extract data from JSON strings, but what if you want to parse an array of JSON objects? Here's how.
 tags:
   - intermediate
   - getting-started

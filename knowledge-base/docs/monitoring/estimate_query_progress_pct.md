@@ -1,7 +1,7 @@
 ---
 id: estimate_query_progress_pct
 title: Estimate the progress of a query
-description:
+description: ClickHouse usually processes queries very quickly, but here's how to track the progress of long-running ClickHouse queries.
 tags:
   - intermediate
   - getting-started
@@ -9,7 +9,7 @@ tags:
 
 # Estimate the progress of a query
 
-For longer running queries, it can be useful to know roughly how much progress the query has made. You can use the `system.processes` table to get information about your query and estimate it's progress.
+For longer running queries, you might want to track roughly how much progress the query has made. You can use the `system.processes` table to get information about your query and estimate it's progress.
 
 You will need the `query_id` of the query you want to check. For example:
 

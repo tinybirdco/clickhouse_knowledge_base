@@ -1,7 +1,7 @@
 ---
 id: log_table_ttl
 title: Apply a TTL to system.query_log
-description:
+description: ClickHouse query logs growing too large? Here's how to apply a permanent TTL to your ClickHouse system.query_log.
 tags:
   - beginner
   - getting-started
