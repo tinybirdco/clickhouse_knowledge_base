@@ -9,21 +9,21 @@ function Footer() {
   }
   const {copyright, links, logo, style} = footer;
   return (
-    <footer class={styles.footer}>
-      <div class={styles.row}>
-        <div class={styles.brand}>
+    <footer className={styles.footer}>
+      <div className={styles.row}>
+        <div className={styles.brand}>
           <Logo className={styles.logo}/>
           <span>Created by</span>
           &nbsp;
           <a className={styles.brandLink} href='https://wwww.tinybird.co' target="_blank">Tinybird</a>
         </div>
-        <div class={styles.copyright}>
+        <div className={styles.copyright}>
           {copyright}
         </div>
-        <div class={styles.links}>
+        <div className={styles.links}>
           <ul className={styles.list}>
-            {links.map(link => (
-              <li className={styles.item}>
+            {links.map((link, i) => (
+              <li key={i} className={styles.item}>
                 <a className={styles.link} href={link.href} target="_blank">{link.label}</a>
               </li>
             ))}
