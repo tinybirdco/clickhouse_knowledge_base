@@ -1,0 +1,19 @@
+.content {
+  color: white;
+  background-color: var(--ifm-heading-color);
+  font-size: 0.75rem;
+  text-align: center;
+  padding: 0;
+}
+
+.content a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .content {
+    font-size: 0.875rem !important;
+    line-height: 1rem !important;
+  }
+}

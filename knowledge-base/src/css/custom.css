@@ -53,30 +53,6 @@ html {
   --ifm-footer-link-color: var(--ifm-font-color-base);
 }
 
-[class*="announcementBar"] {
-  height: 36px !important;
-}
-
-@media (min-width: 768px) {
-  [class*="announcementBar"] {
-    height: 40px !important;
-  }
-}
-
-[class*="announcementBarContent"] {
-  color: white;
-  background-color: var(--ifm-heading-color);
-  font-size: 12px !important;
-  padding: 0 !important;
-}
-
-@media (min-width: 768px) {
-  [class*="announcementBarContent"] {
-    font-size: 14px !important;
-    line-height: 16px !important;
-  }
-}
-
 [class*="announcementBarContent"] strong {
   font-weight: var(--ifm-font-weight-bold);
   background-color: var(--ifm-heading-color);
