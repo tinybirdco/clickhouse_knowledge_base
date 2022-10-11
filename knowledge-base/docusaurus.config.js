@@ -47,12 +47,24 @@ const config = {
     ({
       metadata: [
         {
+          property: 'og:type',
+          content: 'website',
+        },
+        {
           property: 'og:image',
-          content: 'https://uploads-ssl.webflow.com/6048c50adefe73fe3bc6c51b/6345599dd11b29b55bc11a57_clickhouse_kb_1200x630.jpg'
+          content: 'https://uploads-ssl.webflow.com/6048c50adefe73fe3bc6c51b/6345599dd11b29b55bc11a57_clickhouse_kb_1200x630.jpg',
         },
         {
           property: 'twitter:image',
-          content: 'https://uploads-ssl.webflow.com/6048c50adefe73fe3bc6c51b/6345599dd11b29b55bc11a57_clickhouse_kb_1200x630.jpg'
+          content: 'https://uploads-ssl.webflow.com/6048c50adefe73fe3bc6c51b/6345599dd11b29b55bc11a57_clickhouse_kb_1200x630.jpg',
+        },
+        {
+          property: 'og:image:width',
+          content: '1200',
+        },
+        {
+          property: 'og:image:height',
+          content: '630',
         },
       ],
       colorMode: {
