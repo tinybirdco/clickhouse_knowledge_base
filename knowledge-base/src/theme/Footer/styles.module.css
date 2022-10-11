@@ -42,6 +42,12 @@
   font-weight: var(--ifm-font-weight-semibold);
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   line-height: 1rem;
+  transition: 0.2s border-color ease-out;
+}
+
+.brandLink:hover {
+  text-decoration: none;
+  border-bottom-color:rgba(0, 0, 0, 1);
 }
 
 .logo svg path {
@@ -70,9 +76,17 @@
 
 .link {
   color: inherit;
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+  transition: 0.2s border-color ease-out, 0.2s color ease-out;
 }
 
-@media (min-width: 420px) {
+.link:hover {
+  text-decoration: none;
+  border-bottom-color:rgba(0, 0, 0, 1);
+  color: var(--ifm-link-color);
+}
+
+@media (min-width: 430px) {
   .list {
     flex-direction: row;
     margin-left: -0.75rem;
@@ -156,21 +170,18 @@
   .copyright {
     padding-left: 3rem;
   }
-
-  .links {
-    padding-left: 2rem;
-  }
 }
 
 
-@media (min-width: 1580px) {
+@media (min-width: 1732px) {
   .brand {
     width: 25%;
   }
 
   .links {
+    justify-content: right;
     width: 25%;
-    padding-left: 16px;
+    padding-left: 1rem;
   }
   
   .copyright {
