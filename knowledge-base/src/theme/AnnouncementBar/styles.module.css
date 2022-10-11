@@ -1,15 +1,16 @@
 :root {
-  --docusaurus-announcement-bar-height: 2.25rem;
+  --docusaurus-announcement-bar-height: auto;
 }
 
 .announcementBar {
+
   display: flex;
   align-items: center;
   height: var(--docusaurus-announcement-bar-height);
   background-color: var(--ifm-color-white);
   color: var(--ifm-color-black);
   box-shadow: var(--ifm-global-shadow-lw);
-  z-index: calc(var(--ifm-z-index-fixed) + 1); /* just above the navbar */
+  z-index: calc(var(--ifm-z-index-fixed) - 1); /* just above the navbar */
 }
 
 html[data-announcement-bar-initially-dismissed='true'] .announcementBar {
