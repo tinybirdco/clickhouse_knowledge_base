@@ -19,7 +19,13 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
+  scripts: [
+    {
+      src: 'https://unpkg.com/@tinybirdco/flock.js',
+      ['data-token']: 'p.eyJ1IjogImE5Yzk1YTA4LTkwZmQtNDRiMi05NDFkLWJlNWQwZTViODVkOCIsICJpZCI6ICJiZDU4YjI4Ni1mNTQ5LTQwY2QtOGI2YS1hM2Q1ZGVlMmU2YjcifQ.H74SbLTfnGMmRn9Ba54Rlalv6j2pGEx6uZ7GxsQVeqA',
+      defer: true,
+    }
+  ],
   presets: [
     [
       'classic',
@@ -36,7 +42,6 @@ const config = {
       }),
     ],
   ],
-
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
