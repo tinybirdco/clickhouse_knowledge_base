@@ -53,6 +53,64 @@ html {
   --ifm-footer-link-color: var(--ifm-font-color-base);
 }
 
+[class*="announcementBar"] {
+  height: 36px !important;
+}
+
+@media (min-width: 768px) {
+  [class*="announcementBar"] {
+    height: 40px !important;
+  }
+}
+
+[class*="announcementBarContent"] {
+  color: white;
+  background-color: var(--ifm-heading-color);
+  font-size: 12px !important;
+  padding: 0 !important;
+}
+
+@media (min-width: 768px) {
+  [class*="announcementBarContent"] {
+    font-size: 14px !important;
+    line-height: 16px !important;
+  }
+}
+
+[class*="announcementBarContent"] strong {
+  font-weight: var(--ifm-font-weight-bold);
+  background-color: var(--ifm-heading-color);
+}
+
+[class*="announcementBarContent"] a {
+  padding: 0.5rem 1rem 0.5rem !important;
+  text-decoration: none !important;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  [class*="announcementBarContent"] a {
+    padding: 0.75rem 1rem 0.75rem !important;
+  }
+}
+
+.announcementBarUnderlined {
+  border-bottom: 1px solid rgba(255,255,255, 1);
+}
+
+@media (min-width: 768px) {
+  .announcementBarUnderlined {
+    border-bottom: 1px solid rgba(255,255,255, 0.4);
+    transition: 0.2s ease-out border-bottom-color;
+  }
+}
+
+[class*="announcementBarContent"] a:hover .announcementBarUnderlined {
+  border-bottom-color: rgba(255,255,255, 1);
+}
+
 /*
 * Navbar
 */
