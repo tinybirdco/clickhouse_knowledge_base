@@ -1,17 +1,17 @@
 ---
 id: drop_table_sync
-title: Hard delete a table
-description: Want to drop a table in ClickHouse and not wait until it's deleted asynchronously?
+title: Hard delete a table with SYNC
+description: Want to drop a table in ClickHouse without waiting until it's deleted? Here's how to use the SYNC modifier to drop tables synchronously in ClickHouse.
 tags:
   - beginner
   - getting-started
 ---
 
-# Synchronous deletion of tables
+# Hard delete a table with SYNC
 
-When dropping tables in ClickHouse, in the default Atomic database engine, the data and the table itself isn't deleted from disk until a) the table is no longer used by concurrent queries and b) 8 minutes (`old_parts_lifetime` setting) have passed since the request was received.
+When you drop tables in ClickHouse, in the default Atomic database engine, the data and the table itself aren't deleted from disk until a) the table is no longer used by concurrent queries and b) 8 minutes (`old_parts_lifetime` setting) have passed since the request was received.
 
-In some circumstances, for example when dropping and recreating the table, this can cause issues with Zookeeper as the table metadata is still there pending asynchronous deletion but we are trying to create it again. For example:
+In some circumstances, for example when you drop and recreate the table, this can cause issues with Zookeeper as the table metadata is still there pending asynchronous deletion, but you are trying to create it again. For example:
 
 ```sql Dropping a replicated table and recreating it again immediately will lead to Zookeeper errors
 production-01 :) drop table test.myTable;
@@ -51,7 +51,7 @@ Received exception from server (version 22.10.1):
 Code: 253. DB::Exception: Received from clickhouse-01:49000. DB::Exception: Replica /clickhouse/tables/01-01/test.myTable/replicas/clickhouse-01 already exists. (REPLICA_IS_ALREADY_EXIST)
 ```
 
-In this case, to avoid the wait [we can use the `SYNC` modifier](https://clickhouse.com/docs/en/sql-reference/statements/drop/#drop-table), which will delete the data and the table synchronously and won't return until everything is clear. Then we can drop and recreate tables without problems:
+In this case, to avoid the wait [you can use the `SYNC` modifier](https://clickhouse.com/docs/en/sql-reference/statements/drop/#drop-table), which will delete the data and the table synchronously and won't return until everything is clear. Then you can drop and recreate tables without problems:
 
 ```
 production-01 :) CREATE TABLE test.myTable2
