@@ -14,7 +14,7 @@ Welcome to the ClickHouse® Knowledge Base, curated with love by [Tinybird](http
 This information can be used with any standard ClickHouse® install.
 
 ## About this Knowledge Base
-This Knowledge Base was created with love and maintained by the team at [Tinybird](https://www.tinybird.co). Tinybird uses ClickHouse under the hood, we've learned alot about it over the years, and we wanted to start sharing our knowledge with the ClickHouse community.
+This Knowledge Base was created with love and maintained by the team at [Tinybird](https://www.tinybird.co). Tinybird uses ClickHouse under the hood, we've learned a lot about it over the years, and we wanted to start sharing our knowledge with the ClickHouse community.
 
 If you have extensive ClickHouse experience, and want to contribute tips of your own, please do!
 
