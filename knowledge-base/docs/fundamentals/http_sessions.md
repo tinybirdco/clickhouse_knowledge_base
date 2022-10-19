@@ -1,7 +1,7 @@
 ---
 id: http_sessions
-title: Client sessions over HTTP
-description: 
+title: Create client sessions over HTTP
+description: Want to know how to create a session when using the ClickHouse HTTP endpoint? Here's how to use the session_id parameter with ClickHouse.
 tags:
   - beginner
   - getting-started
