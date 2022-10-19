@@ -1,7 +1,7 @@
 ---
 id: ascii_art
-title: Creating ASCII art
-description: Ever wanted to create ASCII art from your database? Here's the magic!
+title: Create ASCII art
+description: Ever wanted to create ASCII art from your database? If you're crazy enough to try it, here's how!
 tags:
   - beginner
   - random
