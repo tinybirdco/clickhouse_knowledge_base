@@ -1,7 +1,7 @@
 ---
 id: live_views
 title: Live Views
-description: 
+description: Sometimes you want ClickHouse materialized views to behave like a typical RDBMS. Here's how to use Live Views to periodically refresh ClickHouse materializations.
 tags:
   - beginner
   - getting-started
@@ -9,9 +9,9 @@ tags:
 
 # Live Views
 
-In ClickHouse, materialised views are processed incrementally, while a traditional RDBMS would process them in batch; the traditional RDBMS requires that materialisations are triggered either manually or via external automation, while ClickHouse can materialise values as rows are inserted to the source table(s).
+In ClickHouse, materialized views are processed incrementally, while a traditional RDBMS would process them in batch; the traditional RDBMS requires that materializations are triggered either manually or via external automation, while ClickHouse can materialize values as rows are inserted to the source table(s).
 
-Sometimes you might want behaviour similar to the traditional approach. ClickHouse has recently introduced an experimental feature called [`LIVE VIEWS`](https://clickhouse.com/docs/en/sql-reference/statements/create/view/#live-view-experimental). With a Live View, you can configured a periodic refresh, which re-evaluates the result of the `SELECT` based on a configurable interval, and inserts the results.
+Sometimes you might want behaviour similar to the traditional approach. ClickHouse has recently introduced an experimental feature called [`LIVE VIEWS`](https://clickhouse.com/docs/en/sql-reference/statements/create/view/#live-view-experimental). With a Live View, you can configure a periodic refresh, which re-evaluates the result of the `SELECT` based on a configurable interval, and inserts the results.
 
 For example:
 
