@@ -15,7 +15,7 @@ function Footer() {
           <Logo className={styles.logo}/>
           <span>Created by</span>
           &nbsp;
-          <a className={styles.brandLink} href='https://wwww.tinybird.co' target="_blank">Tinybird</a>
+          <a className={styles.brandLink} href='https://www.tinybird.co' target="_blank">Tinybird</a>
         </div>
         <div className={styles.copyright}>
           {copyright}
