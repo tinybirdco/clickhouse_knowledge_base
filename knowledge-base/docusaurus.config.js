@@ -19,6 +19,7 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+  plugins: [require.resolve("@cmfcmf/docusaurus-search-local")],
   scripts: [
     {
       src: 'https://unpkg.com/@tinybirdco/flock.js',
