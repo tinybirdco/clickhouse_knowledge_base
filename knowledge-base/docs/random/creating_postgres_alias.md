@@ -1,4 +1,5 @@
 ---
+slug: /creating-postgres-alias
 id: creating_postgres_alias
 title: Create aliases for Postgres functions
 description: Using ClickHouse, but more comfortable with Postgres? Learn how to use custom ClickHouse functions to recreate your favorite Postgres functions in ClickHouse.

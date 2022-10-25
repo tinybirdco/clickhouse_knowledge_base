@@ -1,4 +1,5 @@
 ---
+slug: /show-server-logs-cli
 id: show_server_logs_cli
 title: Show logs in the CLI
 description: Trying to debug a problem with your ClickHouse query, but having trouble filtering through the log file? Here's how to show logs in the CLI to reduce noise when debugging ClickHouse.

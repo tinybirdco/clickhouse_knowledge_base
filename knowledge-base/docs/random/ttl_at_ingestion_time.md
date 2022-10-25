@@ -1,4 +1,5 @@
 ---
+slug: /ttl-at-ingestion-time
 id: ttl_at_ingestion_time
 title: Control TTL at ingestion time
 Description: Want to set a TTL on a table in ClickHouse? Here's how to control the TTL at ingestion time based on a date column.

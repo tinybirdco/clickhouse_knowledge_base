@@ -1,4 +1,5 @@
 ---
+slug: /drop-table-sync
 id: drop_table_sync
 title: Hard delete a table with SYNC
 description: Want to drop a table in ClickHouse without waiting until it's deleted? Here's how to use the SYNC modifier to drop tables synchronously in ClickHouse.

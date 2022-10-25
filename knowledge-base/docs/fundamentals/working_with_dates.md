@@ -1,4 +1,5 @@
 ---
+slug: /working-with-dates
 id: working_with_dates
 title: Handle uncommon or variable date patterns
 description: Getting errors trying to cast toDateTime in ClickHouse? Use this ClickHouse function to handle most DateTime variations without throwing an exception.

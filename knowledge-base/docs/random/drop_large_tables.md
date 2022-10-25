@@ -1,4 +1,5 @@
 ---
+slug: /drop-large-tables
 id: drop_large_tables
 title: Drop large tables
 description: Dropping large tables in ClickHouse, but exceeding the size limits? Here's how to drop a ClickHouse table over the default 50GB size.

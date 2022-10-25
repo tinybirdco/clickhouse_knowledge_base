@@ -1,4 +1,5 @@
 ---
+slug: /error-codes
 id: error_codes
 title: View all ClickHouse error codes
 description: Trying to parse a specific ClickHouse error code? Here's how to view all error codes in ClickHouse.

@@ -1,4 +1,5 @@
 ---
+slug: /read-multiple-tables
 id: read_multiple_tables
 title: Select data from multiple tables
 description: Want to get data from multiple tables in ClickHouse with a single query? Use the merge() ClickHouse function instead of UNION ALL for cleaner queries.

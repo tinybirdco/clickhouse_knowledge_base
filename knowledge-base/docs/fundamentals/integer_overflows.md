@@ -1,4 +1,5 @@
 ---
+slug: /integer-overflows
 id: integer_overflows
 title: Handle integer overflows
 description: ClickHouse doesn't perform overflow checks when casting between integer types. Here's how to handle integer overflows in ClickHouse with accurateCast.

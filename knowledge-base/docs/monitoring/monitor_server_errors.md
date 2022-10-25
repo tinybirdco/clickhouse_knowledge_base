@@ -1,4 +1,5 @@
 ---
+slug: /monitor-server-errors
 id: monitor_server_errors
 title: Monitor for server errors
 description: Wondering how to monitor your ClickHouse server for new errors? Use the system.errors table to track all errors since the server started.

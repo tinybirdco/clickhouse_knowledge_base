@@ -1,4 +1,5 @@
 ---
+slug: /if-or-where
 id: if_or_where
 title: When to use -If vs WHERE
 description: Wondering the difference between the -If combinator and the WHERE statement in ClickHouse? Here are some guidelines to help you choose between -If and WHERE in ClickHouse.

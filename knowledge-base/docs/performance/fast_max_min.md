@@ -1,4 +1,5 @@
 ---
+slug: /fast-max-min
 id: fast_max_min
 title: Speed up ARGMIN and ARGMAX aggregations
 Description: ARGMIN() and ARGMAX are useful ClickHouse functions. Here's how to make them faster to speed up your queries in ClickHouse.

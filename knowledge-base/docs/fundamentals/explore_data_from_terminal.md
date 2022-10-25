@@ -1,4 +1,5 @@
 ---
+slug: /explore-data-from-terminal
 id: explore_data_from_terminal
 title: Explore data from the terminal
 description: Want to explore data using ClickHouse in the terminal? Here's how to do that with the clickhouse-client command line interface.

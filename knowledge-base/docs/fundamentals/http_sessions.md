@@ -1,4 +1,5 @@
 ---
+slug: /http-sessions
 id: http_sessions
 title: Create client sessions over HTTP
 description: Want to know how to create a session when using the ClickHouse HTTP endpoint? Here's how to use the session_id parameter with ClickHouse.

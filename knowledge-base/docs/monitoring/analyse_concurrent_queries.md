@@ -1,4 +1,5 @@
 ---
+slug: /analyse-concurrent-queries
 id: analyze_concurrent_queries
 title: Analyze concurrent queries
 description: Getting the TOO_MANY_SIMULTANEOUS_QUERIES error in ClickHouse? Here's how to analyze which queries are throttling your ClickHouse instance.

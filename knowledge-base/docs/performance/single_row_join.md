@@ -1,4 +1,5 @@
 ---
+slug: /single-row-join
 id: single_row_join
 title: Optimize single row joins
 description: Wondering how to optimize single row joins in ClickHouse? Use a CROSS JOIN to improve join efficiency in ClickHouse.

@@ -1,4 +1,5 @@
 ---
+slug: /get-clickhouse-latest
 id: get_clickhouse_latest
 title: Get the latest ClickHouse build
 description: Want to get the latest ClickHouse build? Here's how to download the latest build to keep up with the many changes to ClickHouse.

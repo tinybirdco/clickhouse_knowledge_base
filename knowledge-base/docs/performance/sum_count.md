@@ -1,4 +1,5 @@
 ---
+slug: /sum-count
 id: sum_count
 title: Optimize queries with Sum and Count
 description: Sum() and Count() are the most common ClickHouse aggregations. Here's how to speed up queries in ClickHouse that use a sum and count aggregation.

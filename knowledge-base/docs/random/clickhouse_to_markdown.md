@@ -1,4 +1,5 @@
 ---
+slug: /clickhouse-to-markdown
 id: clickhouse_to_markdown
 title: Export query results to Markdown table
 description: Want to post your ClickHouse query results online? Here's how to export your ClickHouse query results to a Markdown table.

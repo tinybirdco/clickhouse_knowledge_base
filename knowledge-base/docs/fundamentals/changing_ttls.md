@@ -1,4 +1,5 @@
 ---
+slug: /changing-ttls
 id: changing_ttls
 title: Change table TTLs
 description: Want to change table TTLs in ClickHouse? Here's how you can modify the TTL of a table in ClickHouse and avoid impacting performance.

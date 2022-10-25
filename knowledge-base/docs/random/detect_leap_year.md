@@ -1,4 +1,5 @@
 ---
+slug: /detect-leap-year
 id: detect_leap_year
 title: Detect leap years
 description: Need to detect leap years in ClickHouse? Here's a query to find years that contain 366 days instead of 365.

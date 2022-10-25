@@ -1,4 +1,5 @@
 ---
+slug: /compression-scan-size
 id: compression_scan_size
 title: Optimize scans with column compression
 description: Want to optimize your queries in ClickHouse? Here's how to use column compression to speed up ClickHouse queries.

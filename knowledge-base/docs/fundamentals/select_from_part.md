@@ -1,4 +1,5 @@
 ---
+slug: /select-from-part
 id: select_from_part
 title: Query a specific part or partition
 description: Want to query from a specific part or partition of a ClickHouse table? Here's how to use ClickHouse virtual columns to do so.

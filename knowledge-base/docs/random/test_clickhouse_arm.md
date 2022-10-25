@@ -1,4 +1,5 @@
 ---
+slug: /test-clickhouse-arm
 id: test_clickhouse_arm
 title: Test ClickHouse on ARM
 description: Want to test ClickHouse on ARM, but you're using a different machine? Here's how to test ClickHouse on ARM without getting an ARM instance from a cloud provider.

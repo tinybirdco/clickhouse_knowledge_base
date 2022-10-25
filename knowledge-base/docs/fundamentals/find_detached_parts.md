@@ -1,4 +1,5 @@
 ---
+slug: /find-detached-parts
 id: find_detached_parts
 title: Find detached parts & partitions
 description: Here's how you can discover which parts & partitions have been detached from your ClickHouse tables.
