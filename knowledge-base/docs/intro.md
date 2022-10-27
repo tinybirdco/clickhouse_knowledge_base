@@ -9,7 +9,7 @@ keywords: [clickhouse, docs, guides, knowledge base]
 
 # Introduction
 
-Welcome to the ClickHouse® Knowledge Base, curated with love by [Tinybird](https://tinybird.co)! 
+Welcome to the ClickHouse® Knowledge Base, curated with love by [Tinybird](https://www.tinybird.co)!
 
 This information can be used with any standard ClickHouse® install.
 

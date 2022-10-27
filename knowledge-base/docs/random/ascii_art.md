@@ -36,7 +36,7 @@ Ever wanted to create ASCII art from your database? Here's the magic!
                 UNION ALL
                 SELECT
                     1 AS or,
-                    arrayJoin(arrayMap(x -> replace(CAST(concat(' ', x), 'FixedString(60)'), '\0', ' '), ['', 'We look at birds as creatures that', 'do amazing things that we cannot.', '', 'They can go (almost) anywhere by flying', 'while apparently enjoying the journey a lot', '', 'And when in a flock, they seem to enjoy it even more.', '', '-----', 'Tinybird founding team', 'https://tinybird.co', ''])) AS msg
+                    arrayJoin(arrayMap(x -> replace(CAST(concat(' ', x), 'FixedString(60)'), '\0', ' '), ['', 'We look at birds as creatures that', 'do amazing things that we cannot.', '', 'They can go (almost) anywhere by flying', 'while apparently enjoying the journey a lot', '', 'And when in a flock, they seem to enjoy it even more.', '', '-----', 'Tinybird founding team', 'https://www.tinybird.co', ''])) AS msg
             ) AS bird_and_text
             ORDER BY or ASC
         )
@@ -75,6 +75,6 @@ Ever wanted to create ASCII art from your database? Here's the magic!
     "                                                            "
     " -----                                                      "
     " Tinybird founding team                                     "
-    " https://tinybird.co                                        "
+    " https://www.tinybird.co                                        "
     "                                                            "
 ```

@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'ClickHouse Knowledge Base',
   tagline: 'with love from Tinybird',
-  url: 'https://tinybird.co',
+  url: 'https://www.tinybird.co',
   baseUrl: '/clickhouse/knowledge-base/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',
