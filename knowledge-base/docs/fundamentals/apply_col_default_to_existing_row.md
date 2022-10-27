@@ -1,4 +1,5 @@
 ---
+slug: /apply-col-default-to-existing-row
 id: apply_col_default_to_existing_row
 title: Apply column default to existing rows
 description: Want to apply a default value to existing rows in a ClickHouse table column? Here's how to do that with MATERIALIZE.

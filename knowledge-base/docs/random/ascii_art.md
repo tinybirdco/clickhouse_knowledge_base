@@ -1,4 +1,5 @@
 ---
+slug: /ascii-art
 id: ascii_art
 title: Create ASCII art
 description: Ever wanted to create ASCII art from your database? If you're crazy enough to try it, here's how!

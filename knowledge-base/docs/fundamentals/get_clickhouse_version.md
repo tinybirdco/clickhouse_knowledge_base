@@ -1,4 +1,5 @@
 ---
+slug: /get-clickhouse-version
 id: get_clickhouse_version
 title: Get your ClickHouse version
 description: Wondering what version of ClickHouse you're running? Here's how to get your ClickHouse version with a query, in the CLI, or over the HTTP interface.

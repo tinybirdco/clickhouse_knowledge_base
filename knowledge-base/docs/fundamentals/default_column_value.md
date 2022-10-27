@@ -1,4 +1,5 @@
 ---
+slug: /default-column-value
 id: default_column_value
 title: Add a default value for new columns
 description: Want to change the default value for new columns in ClickHouse? Here's how to do just that.

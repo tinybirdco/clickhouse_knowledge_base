@@ -1,4 +1,5 @@
 ---
+slug: /join-algorithm
 id: join_algorithm
 title: Optimize memory usage for joins
 description: ClickHouse has different algorithms for join operations. Here's how to choose which join algorithm to use to reduce memory usage.

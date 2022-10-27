@@ -1,4 +1,5 @@
 ---
+slug: /async-insert
 id: async_insert
 title: Avoid TOO_MANY_PARTS with async_insert
 description: "Getting a TOO_MANY_PARTS exception in ClickHouse? If you see DB::Exception: Too many parts (600), you can avoid it by using async_insert in v21.11."

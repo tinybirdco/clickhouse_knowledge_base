@@ -1,4 +1,5 @@
 ---
+slug: /format-queries
 id: format_queries
 title: Format queries
 description: Are your ClickHouse queries ugly? Here's how to format them in the command line with the ClickHouse query formatter.

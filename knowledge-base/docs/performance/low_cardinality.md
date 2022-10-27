@@ -1,4 +1,5 @@
 ---
+slug: /low-cardinality
 id: low_cardinality
 title: Use LowCardinality
 description: ClickHouse LowCardinality types can improve the speed of your queries. Here is how and when to use LowCardinality to optimize column storage for faster queries.

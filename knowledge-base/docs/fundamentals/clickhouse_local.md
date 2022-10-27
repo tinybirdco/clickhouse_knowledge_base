@@ -1,4 +1,5 @@
 ---
+slug: /clickhouse-local
 id: clickhouse_local
 title: Analyze local files with clickhouse-local
 description: Want to explore local files in ClickHouse? Use clickhouse-local to run a temporary ClickHouse instance on your local machine to analyze structured files.

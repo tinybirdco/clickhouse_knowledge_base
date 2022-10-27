@@ -1,4 +1,5 @@
 ---
+slug: /aggr-intermediate-state
 id: aggr_intermediate_state
 title: View the intermediate states of aggregations
 description: ClickHouse stores intermediate aggregation states for materializations. Here's how to view intermediate states of aggregations and finalize aggregations.

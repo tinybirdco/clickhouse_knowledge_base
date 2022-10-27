@@ -1,4 +1,5 @@
 ---
+slug: /metrics-visualise-flamegraph
 id: metrics_visualize_flamegraph
 title: Visualize stack traces with flamegraphs
 description: Flamegraphs are a great way to visualize metrics from stack traces. Here's how to use flamegraphs to visualize ClickHouse stack traces.

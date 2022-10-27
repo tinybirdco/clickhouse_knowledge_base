@@ -1,4 +1,5 @@
 ---
+slug: /find-mat-view-dependencies
 id: find_mat_view_dependencies
 title: Find Materialized View dependencies
 description: If you change a table in ClickHouse, it can affect Materialized Views that depend on it. Here's how to find all MV dependencies for your ClickHouse table.

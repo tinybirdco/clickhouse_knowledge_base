@@ -1,4 +1,5 @@
 ---
+slug: /estimate-query-progress-pct
 id: estimate_query_progress_pct
 title: Estimate the progress of a query
 description: ClickHouse usually processes queries very quickly, but here's how to track the progress of long-running ClickHouse queries.

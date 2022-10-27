@@ -1,4 +1,5 @@
 ---
+slug: /faster-joins
 id: faster_joins
 title: Make joins faster by moving your filter
 description: Want to speed up your joins in ClickHouse? Here is a smart approach to improving ClickHouse join speed by applying your filters earlier in a subquery.

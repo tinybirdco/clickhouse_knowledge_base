@@ -1,4 +1,5 @@
 ---
+slug: /swapping-tables
 id: swapping_tables
 title: Swap tables
 description: Want to swap one table for another in ClickHouse? Here are two ways to swap tables in ClickHouse using EXCHANGE TABLE or RENAME TABLE statements

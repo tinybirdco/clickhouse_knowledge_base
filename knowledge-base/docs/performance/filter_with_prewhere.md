@@ -1,4 +1,5 @@
 ---
+slug: /filter-with-prewhere
 id: filter_with_prewhere
 title: Filter with PREWHERE
 description: Wondering when to use PREWHERE in ClickHouse? Here's how to optimize filtering with PREWHERE and minimize scan size in ClickHouse.

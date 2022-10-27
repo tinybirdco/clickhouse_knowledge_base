@@ -1,4 +1,5 @@
 ---
+slug: /soft-delete-tables
 id: soft_delete_tables
 title: Soft delete tables
 description: Want to drop a table in ClickHouse, but worried about losing data? Here's how to "soft" delete a ClickHouse table so you can restore it in the future.

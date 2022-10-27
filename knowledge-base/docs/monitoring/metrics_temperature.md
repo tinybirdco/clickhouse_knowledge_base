@@ -1,4 +1,5 @@
 ---
+slug: /metrics-temperature
 id: metrics_temperature
 title: Get your ClickHouse Server Temperature
 description: Curious to know your ClickHouse server temperature? Here's a query to get your ClickHouse server temperature.

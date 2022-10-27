@@ -1,4 +1,5 @@
 ---
+slug: /functions-to-multiple-cols
 id: functions_to_multiple_cols
 title: Apply a function to multiple columns
 description: Want to apply a function to multiple columns in ClickHouse? Here's a shortcut to applying the same function across several columns in a table.

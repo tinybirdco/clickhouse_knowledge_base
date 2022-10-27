@@ -1,4 +1,5 @@
 ---
+slug: /live-views
 id: live_views
 title: Live Views
 description: Sometimes you want ClickHouse materialized views to behave like a typical RDBMS. Here's how to use Live Views to periodically refresh ClickHouse materializations.
