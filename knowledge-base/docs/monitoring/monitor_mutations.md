@@ -1,4 +1,5 @@
 ---
+slug: monitor_mutations
 id: monitor_mutations
 title: Monitor Mutations
 description: 

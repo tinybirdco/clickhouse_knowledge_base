@@ -1,4 +1,5 @@
 ---
+slug: substract_datetime64
 id: substract_datetime64
 title: 
 description: Subtract two DateTime64 Values

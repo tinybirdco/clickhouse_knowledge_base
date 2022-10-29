@@ -1,4 +1,5 @@
 ---
+slug: get_server_ports
 id: get_server_ports
 title: Get all server ports
 description: 
