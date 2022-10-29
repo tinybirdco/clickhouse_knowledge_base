@@ -20,12 +20,7 @@ const config = {
     locales: ['en'],
   },
   plugins: [
-    [
-      require.resolve("@cmfcmf/docusaurus-search-local"),
-      {
-        indexBlog: false,
-      }
-    ]
+    []
   ],
   scripts: [
     {
@@ -129,6 +124,15 @@ const config = {
       prism: {
         theme: require('./custom-code-theme'),
       },
+      algolia: {
+        appId: '0HTSPT90QP',
+        apiKey: 'b2d6d8490c8e071c29380a79d1ed4ee4',
+        indexName: 'tinybird',
+        contextualSearch: true,
+        // externalUrlRegex: 'external\\.com|domain\\.com',
+        // searchParameters: {},
+        searchPagePath: 'search',
+      }
     }),
 };
 
