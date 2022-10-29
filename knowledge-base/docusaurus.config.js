@@ -20,7 +20,6 @@ const config = {
     locales: ['en'],
   },
   plugins: [
-    []
   ],
   scripts: [
     {
