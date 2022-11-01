@@ -1,8 +1,8 @@
 ---
-slug: get_server_ports
+slug: get-server-ports
 id: get_server_ports
-title: Get all server ports
-description: 
+title: Get server ports for TCP, HTTP, and gRPC
+description: ClickHouse servers can open network ports for TCP, HTTP, and gRPC. Here's how to find out which ports these interfaces are bound to on a ClickHouse server.
 tags:
   - beginner
   - getting-started
@@ -10,7 +10,7 @@ tags:
 
 # Get all server ports
 
-A ClickHouse server can open network ports for the 3 supported interface types in ClickHouse: native TCP, HTTP and gRPC. Whether you use a single ClickHouse server, or a cluster of them, it can be very useful to find out which ports these interfaces are bound to. You could get this information from the host machine's OS, but ClickHouse makes it easy to get the information with SQL!
+A ClickHouse server can open network ports for the 3 supported interface types in ClickHouse: native TCP, HTTP and gRPC. Whether you use a single ClickHouse server, or a cluster of them, it can be very useful to find out which ports these interfaces are bound to. You could get this information from the host machine's OS, but ClickHouse makes it easy to get the information with SQL.
 
 The `getServerPort` function will return the port number for the given interface.
 

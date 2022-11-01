@@ -1,15 +1,15 @@
 ---
-slug: monitor_mutations
+slug: monitor-mutations
 id: monitor_mutations
-title: Monitor Mutations
-description: 
+title: Monitor ClickHouse mutations
+description: ClickHouse mutations are asynchronous and can take time to finish. Here's how to monitor their progress with a built in ClickHouse table.
 tags:
   - intermediate
   - monitoring
 ---
 
 
-# Monitor Mutations
+# Monitor ClickHouse mutations
 
 ClickHouse [mutations](https://clickhouse.com/docs/en/sql-reference/statements/alter/#mutations) are asynchronous and can take time to finish. They can also error out and block subsequent mutations, so it's important to monitor them to decide whether to cancel or reapply them where necessay.
 

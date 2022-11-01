@@ -1,15 +1,15 @@
 ---
-slug: query_remote_clickhouse_server
+slug: query-remote-clickhouse-server
 id: query_remote_clickhouse_server
 title: Query a remote ClickHouse server
-description: 
+description: Want to query a specific remote ClickHouse server? Here's how to use the remote() function to send queries to a different ClickHouse cluster.
   - beginner
   - getting-started
 ---
 
 # Query a remote ClickHouse server
 
-If you have more than one ClickHouse cluster, you might want to send queries from cluster to another. This is pretty easy in ClickHouse, which has builtin support for just that.
+If you have more than one ClickHouse cluster, you might want to send queries from one cluster to another. This is pretty easy in ClickHouse, which has built in support for just that.
 
 The `remote` (or `remoteSecure`) functions can be used in the `FROM` clause to read data from a remote server.
 
