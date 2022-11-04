@@ -1,5 +1,5 @@
 ---
-slug: get-server-ports
+slug: /get-server-ports
 id: get_server_ports
 title: Get server ports for TCP, HTTP, and gRPC
 description: ClickHouse servers can open network ports for TCP, HTTP, and gRPC. Here's how to find out which ports these interfaces are bound to on a ClickHouse server.
