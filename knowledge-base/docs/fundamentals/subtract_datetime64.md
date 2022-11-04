@@ -1,5 +1,5 @@
 ---
-slug: subtract-datetime64
+slug: /subtract-datetime64
 id: subtract_datetime64
 title: Subtract two DateTime64 values
 description: Working with datetimes in ClickHouse? Here's how to subtract values from two DateTime64 columns in a ClickHouse table without getting an error.
