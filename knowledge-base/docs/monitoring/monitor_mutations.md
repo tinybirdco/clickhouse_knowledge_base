@@ -1,5 +1,5 @@
 ---
-slug: monitor-mutations
+slug: /monitor-mutations
 id: monitor_mutations
 title: Monitor ClickHouse mutations
 description: ClickHouse mutations are asynchronous and can take time to finish. Here's how to monitor their progress with a built in ClickHouse table.
