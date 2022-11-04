@@ -1,5 +1,5 @@
 ---
-slug: import-remote-files-by-url
+slug: /import-remote-files-by-url
 id: import_remote_files_by_url
 title: Create tables from remote file URLs
 description: Want to create a ClickHouse table from a remote file URL? You can use the `url` function to do that. Here's how.
