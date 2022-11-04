@@ -1,5 +1,5 @@
 ---
-slug: query-remote-clickhouse-server
+slug: /query-remote-clickhouse-server
 id: query_remote_clickhouse_server
 title: Query a remote ClickHouse server
 description: Want to query a specific remote ClickHouse server? Here's how to use the remote() function to send queries to a different ClickHouse cluster.
