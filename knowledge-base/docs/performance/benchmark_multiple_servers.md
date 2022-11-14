@@ -1,8 +1,8 @@
 ---
-slug: /benchmark_multiple_servers
+slug: /benchmark-multiple-servers
 id: benchmark_multiple_servers
 title: Benchmark a query against multiple servers
-description: clickhouse-benchmark is a powerfull tool. Here's how to benchmark a query against different ClickHouse server, that might have different versions or configurations.
+description: clickhouse-benchmark is a powerfull tool. Here's how to benchmark a query against different ClickHouse server that might have different versions or configurations.
 tags:
   - performance
 ---
