@@ -1,17 +1,21 @@
 ---
 slug: /benchmark_multiple_servers
 id: benchmark_multiple_servers
-title: Benchmark query against multiple servers
-description: Benchmark is a powerfull ClickHouse tool. Here's how to run benchmark a query against different versions, or configurations.
+title: Benchmark a query against multiple servers
+description: clickhouse-benchmark is a powerfull tool. Here's how to benchmark a query against different ClickHouse server, that might have different versions or configurations.
 tags:
   - performance
 ---
 
-# Benchmark query against multiple servers
+# Benchmark a query against multiple servers
 
-When running `clickhouse benchmark` you can run same test against two different CH servers by passing multiple hosts and ports.
+You might want to benchmark a query against different versions of ClickHouse, or perhaps the same version but running different configurations. 
 
-This way you can easily test if there are statistically significant differences between two different versions, or configurations:
+Using `clickhouse-benchmark` you can run the same test against two different ClickHouse servers by passing multiple hosts and ports. 
+
+This way you can easily test if there are statistically significant differences between the two.
+
+For example:
 
 ```bash
 
