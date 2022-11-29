@@ -2,7 +2,7 @@
 slug: /parse-urls
 id: parse_urls
 title: Parse URLs
-description: ClickHouse has built-in functions to work with URLs that help you avoid writing custom Regex
+description: Parsing URLs with SQL can be a pain. Here's how to use ClickHouse functions to work with URLs and avoid writing custom Regex.
 tags:
   - beginner
   - getting-started
