@@ -8,7 +8,7 @@ tags:
   - random
 ---
 
-# Detec leap years
+# Detect leap years
 
 A leap year is a year that contains 366 days instead of 365 days, with the extra day occuring on February 29th (rather than February ending on the 28th), and happens every 4 years. They can be really annoying for date math! 
 
