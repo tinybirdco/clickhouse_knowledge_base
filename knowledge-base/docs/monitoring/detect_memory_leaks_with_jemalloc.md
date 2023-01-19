@@ -58,4 +58,4 @@ Or even better, you can generate a graph with all allocations:
    jeprof --show_bytes /home/pablo/Tinybird/ch_versions/21.9.5.16/clickhouse jeprof.548012.0.f.heap --pdf > memory_leak_report.pdf
 ```
 
-![Memory leak report](./img/memory_leak_report.svg)
+![Memory leak report](./img/memory_leak_graph.svg)
