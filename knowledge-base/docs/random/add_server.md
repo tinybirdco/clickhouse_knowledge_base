@@ -14,7 +14,7 @@ Zookeeper crashed, the server burned and it was a standalone replica without bac
 
 So how do you restore Zookeeper into an usable state?
 
-ClickHouse's got your back: [`SYSTEM RESTORE REPLICA ON CLUSTER`](`https://clickhouse.com/docs/en/sql-reference/statements/system/#restore-replica`)
+ClickHouse's got your back: [`SYSTEM RESTORE REPLICA ON CLUSTER`](https://clickhouse.com/docs/en/sql-reference/statements/system/#restore-replica)
 
 You can use this command to ask ClickHouse to push the information that the server has about the replication status to Zookeeper. Although it's going to be slow and painful, all you need to do is to iterate over all databases and over all replicated tables and execute that command for every one of them.
 
