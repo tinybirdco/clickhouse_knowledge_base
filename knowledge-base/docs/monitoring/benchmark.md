@@ -17,7 +17,7 @@ Below are some tips for how to successfully benchmark functions in ClickHouse
 clickhouse benchmark --query "select uniqMerge(b_count) as b_count from matview"
 ```
 
-It will give keep running the query over an over again and give you the measurements live. You can use perf or other profiling tools in the meantime, no matter how fast the query is.
+It will keep running the query over an over again and give you the measurements live. You can use perf or other profiling tools in the meantime, no matter how fast the query is.
 
 ## Use FORMAT Null
 
@@ -33,7 +33,7 @@ If you are measuring the performance of a specific function, you don't really ca
 clickhouse benchmark --query "select uniqMerge(b_count) as b_count from matview FORMAT Null SETTINGS max_threads=1"
 ```
 
-This is only useful when evaluating a function, not a whole query. It's better to not have to think about how many threads are available in the machine and ClickHouse at a certain moment, so having only one makes it simpler to benchmark and profile.
+This is only useful when evaluating a function, not a whole query. It's better to not have to think about how many threads are available to ClickHouse at a certain point in time, so having only one makes it simpler to benchmark and profile.
 
 
 ## Use numbers() or zeros() to generate many rows
@@ -55,7 +55,7 @@ FORMAT `Null` SETTINGS max_threads=1
 0 rows in set. Elapsed: 0.001 sec. Processed 1.05 million rows, 1.05 MB (1.18 billion rows/s., 1.18 GB/s.)
 ```
 
-## But use materialize() to force the evaluation of const values for all rows
+## Use materialize() to force the evaluation of const values for all rows
 
 ```sql
 SELECT *
