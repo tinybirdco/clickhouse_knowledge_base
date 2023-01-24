@@ -42,7 +42,7 @@ clickhouse server \
     --interserver_http_port 39009
 ```
 
-This works for almost any configuration, but there are some that aren't as simple to change, for example the macros `REPLICA`, `LAYER` and `SHARD`. For these, you change the configuration so it reads them from the environment:
+This works for almost any configuration, but there are some that aren't as simple to change, for example the macros `REPLICA`, `LAYER` and `SHARD`. For these, you change the configuration so it reads them from the environment.
 
 In your xml config file include something like...
 
