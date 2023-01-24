@@ -145,8 +145,8 @@ Now let's compare the performance:
 
 | Group By | MergeTree | AggregatingMergeTree | SummingMergeTree |
 | :--- | :---: | :---: | :---: |
-| Day | Elapsed: 1.055 s<br>Processed: 1.91 GB | Elapsed: 0.064 s<br>Processed: 172.94 MB | Elapsed: 0.039 s<br>Processed: 54.34 MB |
-| Month | Elapsed: 1.060 s<br>Processed: 1.91 GB | Elapsed: 0.008 s<br>Processed: 6.18 MB | Elapsed: 0.006 s<br>Processed: 2.08 MB |
+| Day | Elapsed: 1.055 s<br/>Processed: 1.91 GB | Elapsed: 0.064 s<br/>Processed: 172.94 MB | Elapsed: 0.039 s<br/>Processed: 54.34 MB |
+| Month | Elapsed: 1.060 s<br/>Processed: 1.91 GB | Elapsed: 0.008 s<br/>Processed: 6.18 MB | Elapsed: 0.006 s<br/>Processed: 2.08 MB |
 
 As you can see the most performant queries in terms of time and processed bytes (the ones that process the less bytes) use the ``SummingMergeTree`` engine.
 
