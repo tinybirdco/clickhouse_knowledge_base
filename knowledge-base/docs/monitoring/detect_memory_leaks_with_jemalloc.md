@@ -10,8 +10,7 @@ tags:
 
 # Detect ClickHouse memory leaks with jemalloc
 
-ClickHouse uses by default the [jemalloc](http://jemalloc.net) allocator. When you're trying to identify where a memory leak might be within ClickHouse, you might think that [Valgrind's memcheck](https://valgrind.org/docs/manual/mc-manual.html) or even [Valgrind's massif]
-(https://valgrind.org/docs/manual/ms-manual.html) might be the right tools. 
+By default, ClickHouse uses the [jemalloc](http://jemalloc.net) allocator. When you're trying to identify where a memory leak might be within ClickHouse, you might think that [Valgrind's memcheck](https://valgrind.org/docs/manual/mc-manual.html) or even [Valgrind's massif](https://valgrind.org/docs/manual/ms-manual.html) might be the right tools. 
 
 However, they require that you compile ClickHouse disabling jemalloc. That is, using `-DENABLE_JEMALLOC=0`. The reasoning is that Valgrind tools require the
 use of glibc's allocator to work properly. Also, using Valgrind significantly slows down the execution at runtime, usually by a factor of 100x.
