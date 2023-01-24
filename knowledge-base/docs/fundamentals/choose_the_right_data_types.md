@@ -48,7 +48,7 @@ total_rows: 10000000
 bytes:      397.03 KiB
 ```
 
-...when it's time to process bytes you end up processing 8GB of data:
+...but, when it's time to run a query, you end up processing 80MB of data:
 
 ```sql
 SELECT sum(number)
@@ -91,7 +91,7 @@ total_rows: 1000000000
 bytes:      110.89 KiB
 ```
 
-...but there's a huge difference in bytes processed:
+...but, when querying, there's a huge difference in bytes processed, which is 8 times lower at 10MB:
 
 ```sql
 SELECT sum(number)
@@ -106,4 +106,6 @@ Query id: 8df38fab-2251-4814-aa1f-9434ca942525
 1 rows in set. Elapsed: 0.005 sec. Processed 10.00 million rows, 10.00 MB (1.98 billion rows/s., 1.98 GB/s.)
 ```
 
-As expected, data processed is 8 times lower. Now imagine you run that query over and over and over... 💸 chose your data types carefully.
+Now imagine you run that query over and over and over... 💸 
+
+Choose your data types carefully!
