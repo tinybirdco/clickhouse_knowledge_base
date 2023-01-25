@@ -48,10 +48,8 @@ Total: 3636968 B
 2784   0.1%  99.8%     2784   0.1% __libc_realloc
 ```
 
-Or even better, you can generate a graph with all allocations:
+[Or even better, you can generate a graph with all allocations:](./img/memory_leak_graph.svg)
 
 ```bash
 jeprof --show_bytes /home/pablo/Tinybird/ch_versions/21.9.5.16/clickhouse jeprof.548012.0.f.heap --pdf > memory_leak_report.pdf
 ```
-
-![Memory leak report](./img/memory_leak_graph.svg)
