@@ -20,7 +20,7 @@ Luckily for us, ClickHouse publishes the results of all the runs, on a publicly 
 
 You can go to https://play.clickhouse.com/play?user=play and PLAY:
 
-```SQL
+```sql
 with 70 as test_name_limit
 SELECT
 identity(count(*) as fails) as "Fails",
