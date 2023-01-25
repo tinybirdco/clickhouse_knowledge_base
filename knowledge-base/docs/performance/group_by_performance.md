@@ -8,7 +8,7 @@ tags:
  - performance
 ---
 
-# Does the order of the columns in the group by affect the performance?
+# Does the order of the columns in the group by affect performance?
 
 The short answer: Yes.
 
