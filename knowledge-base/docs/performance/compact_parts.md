@@ -10,9 +10,9 @@ tags:
 
 # Use compact parts to store columns together on disk
 
-ClickHouse is a columnar database, this means that every column gets indepently stored in disk. This makes reading data from disk only for the column that are used in a query.
+ClickHouse is a columnar database, meaning that every column gets stored in disk independently. This makes it very efficient when you only want to read data from a single column.
 
-This comes at a cost, operations affecting multiple columns become more expensive. But there is a way to force columns to get stored together in disk, this makes reading columns sequentially, improving performance.
+However, this comes at a cost, operations affecting multiple columns become more expensive. But there is a way to force columns to get stored together in disk, which can improve performance when reading columns sequentially.
 
 We can take advantage of [compact parts](https://clickhouse.com/docs/en/engines/table-engines/mergetree-family/mergetree#mergetree-data-storage), to validate the idea we'll create two tables with 90 columns each, forcing one of them to use compact parts:
 
@@ -82,7 +82,7 @@ FORMAT PrettyCompact;
 └───────────┴───────────┴───────────┴───────┴─────────┴────────────┴─────────────────────┘
 ```
 
-When you read a single column, the wide parts table is faster as expected when dealing with a columnar database...
+When you read a single column, there's little different between the two strategies, they're both super fast...
 
 ```bash
 ❯ ./clickhouse benchmark <<< "SELECT c1 FROM wide_compact.wide_parts LIMIT 1000" --cumulative --max_threads 1 -i 500
@@ -101,7 +101,7 @@ Queries executed: 500.
 localhost:9000, queries 500, QPS: 1718.089, RPS: 14074585.683, MiB/s: 53.690, result RPS: 1718089.073, result MiB/s: 6.554.
 ```
 
-...but when you read all of them, the compact parts table is way faster!
+...but when you read all columns, the compact parts table is way faster!
 
 ```bash
 ❯ ./clickhouse benchmark <<< "SELECT * FROM wide_compact.wide_parts LIMIT 1000" --cumulative --max_threads 1 -i 500
