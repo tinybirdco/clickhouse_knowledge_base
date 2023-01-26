@@ -4,6 +4,8 @@ slug: /parse_complex_emojis
 title: Parse complex emojis with tokens()
 description: Sometimes you need to parse complex emojis in your ClickHouse queries. Here's how to do that with the ClickHouse tokens() function.
 tags: 
+ - random
+ - beginner
 ---
 
 # Parse complex emojis with the ``tokens()`` function
