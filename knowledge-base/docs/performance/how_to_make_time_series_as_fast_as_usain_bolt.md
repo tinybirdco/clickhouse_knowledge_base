@@ -42,7 +42,7 @@ This will create three different tables with different engines. It'll take a whi
 ## Comparing performance between engines
 These are the results for the queries with the source `MergeTree` table:
 
-### `MergeTree`
+### MergeTree
 #### Group by day and use a `MergeTree`
 
 ```sql
@@ -74,7 +74,7 @@ FORMAT `Null`
 
 Elapsed: 1.060 sec. Processed 158.96 million rows, 1.91 GB (149.98 million rows/s., 1.80 GB/s.)
 ```
-### `AggregatingMergeTree`
+### AggregatingMergeTree
 #### Group by day and use an `AggregatingMergeTree`
 
 ```sql
@@ -109,7 +109,7 @@ Elapsed: 0.008 sec. Processed 80.00 thousand rows, 6.18 MB (10.10 million rows/s
 
 Note that you must use the `-Merge` combinator to get the final aggregated results.
 
-### `SummingMergeTree`
+### SummingMergeTree
 #### Group by day and use an `SummingMergeTree`
 
 ```sql
@@ -150,4 +150,4 @@ Now let's compare the performance:
 
 As you can see the most performant queries in terms of time and processed bytes (the ones that process the less bytes) use the `SummingMergeTree` engine.
 
-So, when running time series aggregates in ClickHouse, use `SummingMergeTree` if possible for to speed up your queries!
+So, when running time series aggregates in ClickHouse, use `SummingMergeTree` if possible to speed up your queries!
