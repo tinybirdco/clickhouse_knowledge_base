@@ -21,20 +21,20 @@ You can apply a `SETTING` to a specific query:
 OPTIMIZE TABLE table_name FINAL SETTINGS optimize_throw_if_noop=1
 ```
 ## 2. Apply settings to clickhouse-client sessions
-You can apply a ``SETTING`` to a ``clickhouse-client`` session:
+You can apply a `SETTING` to a `clickhouse-client` session:
 
 ```sql
 clickhouse-client
 SET max_thread=1
 -- now the setting applies to all the queries from this point
 ```
-...but take into account that when the session is closed the setting is no longer applied to the session, and the setting might not be applied to ``ON CLUSTER`` operations.
+...but take into account that when the session is closed the setting is no longer applied to the session, and the setting might not be applied to `ON CLUSTER` operations.
 
 ## 3. User settings don't require a server restart 
-User settings (those in ``users.xml`` or applied to a user ``profile``) don't require that you restart the ClickHouse server.
+User settings (those in `users.xml` or applied to a user `profile`) don't require that you restart the ClickHouse server.
 
 ## 4. But server settings do
-Server settings (those in ``config.xml``) do require a server restart.
+Server settings (those in `config.xml`) do require a server restart.
 
 ## 5. Specifying table settings
 When configuring table settings, some need to be specified on table creation, but the table can be altered afterwards.
@@ -70,4 +70,4 @@ WHERE name = 'max_threads'
 └─────────────┴───────┴─────────┴───────────────────────────────────────────────────────────────────────────────────────────────────┴──────┴──────┴──────────┴────────────┘
 ```
 
-In this case, you can see if the setting is the default or if it was ``changed``.
+In this case, you can see if the setting is the default or if it was `changed`.

@@ -11,7 +11,7 @@ tags:
 ## Export data from ClickHouse to Tinybird
 So you already have some data in ClickHouse, and you want to quickly export it to Tinybird for the amazing developer experience? 😏 Here's how to do it from your ClickHouse server, with the ClickHouse HTTP interface and a couple of terminal commands. 
 
-ClickHouse and Tinybird both support NDJSON natively, so for example, let's export the contents of the ``system.query_log`` to an NDJSON file using ``FORMAT JSONEachRow`` as the output format.
+ClickHouse and Tinybird both support NDJSON natively, so for example, let's export the contents of the `system.query_log` to an NDJSON file using `FORMAT JSONEachRow` as the output format.
 
 ```bash
 echo "SELECT event_time, toInt32(read_rows) read_rows, toFloat32(read_bytes) read_bytes FROM system.query_log WHERE event_time > now() - INTERVAL 1 YEAR FORMAT JSONEachRow" | curl 'http://localhost:8123/' --data-binary @- > /tmp/out.ndjson
@@ -27,7 +27,7 @@ wc -l /tmp/out.ndjson
 19189831 /tmp/out.ndjson
 ```
 
-The command above in my case generated a ~1GB ``/tmp/out.ndjon`` file with ~20M rows. To push it to Tinybird you just need a ``TOKEN`` with permissions to create a Data Source. Then, just run this command to stream that data to Tinybird using the Tinybird [Events API](https://www.tinybird.co/docs/api-reference/events-api.html):
+The command above in my case generated a ~1GB `/tmp/out.ndjon` file with ~20M rows. To push it to Tinybird you just need a `TOKEN` with permissions to create a Data Source. Then, just run this command to stream that data to Tinybird using the Tinybird [Events API](https://www.tinybird.co/docs/api-reference/events-api.html):
 
 ```bash
 echo TTOKEN=
