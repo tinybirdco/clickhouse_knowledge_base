@@ -8,10 +8,8 @@ tags:
  - performance
 ---
 
-# Does the order of the columns in the group by affect the performance?
+# Does the order of the columns in the group by affect performance?
 
-Yes. Although it is not as crystal-clear as the order of the columns in a sorting key, as a `GROUP BY` is a heavy operation, you should always try to improve the performance.
+The short answer: Yes.
 
-Plus, changing the order of the columns in your `GROUP BY` is an easy and sometimes effective way to do so. 
-
-Experiement with the order of columns in your `GROUP BY` clause to find the most performant query.
+It's not always as obvious as the order of the columns in a sorting key, but as `GROUP BY` is a heavy operation, you should always experiment with the `GROUP BY` to find the optimal order. Changing the order of the columns in your `GROUP BY` is pretty easy, and can be surprisingly effective!
