@@ -8,34 +8,34 @@ tags:
  - random
 ---
 
-# HHow to calculate YoY statistics in ClickHouse
+# How to calculate YoY statistics in ClickHouse
 
 You can get year over year (yoy) growth in ClickHouse with a simple query like this:
 
 ```sql
-    CREATE TABLE events
-    (
-        timestamp DateTime,
-        key LowCardinality(String),
-        value UInt32
-    ) engine=MergeTree()
-    ORDER BY (key, timestamp)
+CREATE TABLE events
+(
+    timestamp DateTime,
+    key LowCardinality(String),
+    value UInt32
+) engine=MergeTree()
+ORDER BY (key, timestamp)
 ```
 
 Now insert some random data...
 
 ```sql
-    INSERT INTO events SELECT
-        now() - toIntervalYear(1),
-        toString(number % 10),
-        rand()
-    FROM numbers(1000000)
+INSERT INTO events SELECT
+    now() - toIntervalYear(1),
+    toString(number % 10),
+    rand()
+FROM numbers(1000000)
 
-    INSERT INTO events SELECT
-        now(),
-        toString(number % 10),
-        rand()
-    FROM numbers(1000000)
+INSERT INTO events SELECT
+    now(),
+    toString(number % 10),
+    rand()
+FROM numbers(1000000)
 ```
 
 ...and calculate the year over year growth with `sumIf()`!

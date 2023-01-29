@@ -18,15 +18,15 @@ Here are 5 things to take into account when using ClickHouse settings.
 You can apply a `SETTING` to a specific query:
 
 ```sql
-    OPTIMIZE TABLE table_name FINAL SETTINGS optimize_throw_if_noop=1
+OPTIMIZE TABLE table_name FINAL SETTINGS optimize_throw_if_noop=1
 ```
 ## 2. Apply settings to clickhouse-client sessions
 You can apply a ``SETTING`` to a ``clickhouse-client`` session:
 
 ```sql
-    clickhouse-client
-    SET max_thread=1
-    -- now the setting applies to all the queries from this point
+clickhouse-client
+SET max_thread=1
+-- now the setting applies to all the queries from this point
 ```
 ...but take into account that when the session is closed the setting is no longer applied to the session, and the setting might not be applied to ``ON CLUSTER`` operations.
 
@@ -40,34 +40,34 @@ Server settings (those in ``config.xml``) do require a server restart.
 When configuring table settings, some need to be specified on table creation, but the table can be altered afterwards.
 
 ```sql
-    CREATE TABLE deleteme
-    (
-        `number` UInt64
-    )
-    ENGINE = MergeTree
-    PARTITION BY number % 10
-    ORDER BY number
-    SETTINGS index_granularity=128
+CREATE TABLE deleteme
+(
+    `number` UInt64
+)
+ENGINE = MergeTree
+PARTITION BY number % 10
+ORDER BY number
+SETTINGS index_granularity=128
 ```
 ## Bonus: Inspecting current settings
 You can inspect current settings applied in several ways:
 
 ```sql
-    SELECT getSetting('max_threads')
+SELECT getSetting('max_threads')
 
-    ┌─getSetting('max_threads')─┐
-    │                        16 │
-    └───────────────────────────┘
+┌─getSetting('max_threads')─┐
+│                        16 │
+└───────────────────────────┘
 ```
 
 ```sql
-    SELECT *
-    FROM system.settings
-    WHERE name = 'max_threads'
+SELECT *
+FROM system.settings
+WHERE name = 'max_threads'
 
-    ┌─name────────┬─value─┬─changed─┬─description───────────────────────────────────────────────────────────────────────────────────────┬─min──┬─max──┬─readonly─┬─type───────┐
-    │ max_threads │ 16    │       1 │ The maximum number of threads to execute the request. By default, it is determined automatically. │ ᴺᵁᴸᴸ │ ᴺᵁᴸᴸ │        0 │ MaxThreads │
-    └─────────────┴───────┴─────────┴───────────────────────────────────────────────────────────────────────────────────────────────────┴──────┴──────┴──────────┴────────────┘
+┌─name────────┬─value─┬─changed─┬─description───────────────────────────────────────────────────────────────────────────────────────┬─min──┬─max──┬─readonly─┬─type───────┐
+│ max_threads │ 16    │       1 │ The maximum number of threads to execute the request. By default, it is determined automatically. │ ᴺᵁᴸᴸ │ ᴺᵁᴸᴸ │        0 │ MaxThreads │
+└─────────────┴───────┴─────────┴───────────────────────────────────────────────────────────────────────────────────────────────────┴──────┴──────┴──────────┴────────────┘
 ```
 
 In this case, you can see if the setting is the default or if it was ``changed``.

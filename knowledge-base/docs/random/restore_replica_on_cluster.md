@@ -10,13 +10,13 @@ tags:
 
 # How do I recover from a fatal data loss in Zookeeper?
 
-Zookeeper crashed, the server burned and it was a standalone replica without backup. Luckily, you were running ClickHouse on a different server (right?? If you aren't, you should re-evaluate) so technically all the data is present on the ClickHouse replicas.
+Imagine that Zookeeper has crashed, the server burned and it was a standalone replica without backup. Luckily, you were running ClickHouse on a different server (if not, you should be!) so technically all the data is present on the ClickHouse replicas.
 
-So how do you restore Zookeeper into an usable state?
+So how do you restore Zookeeper into a usable state?
 
-ClickHouse's got your back: [`SYSTEM RESTORE REPLICA ON CLUSTER`](https://clickhouse.com/docs/en/sql-reference/statements/system/#restore-replica)
+ClickHouse has got your back: [`SYSTEM RESTORE REPLICA ON CLUSTER`](https://clickhouse.com/docs/en/sql-reference/statements/system/#restore-replica)
 
 You can use this command to ask ClickHouse to push the information that the server has about the replication status to Zookeeper. Although it's going to be slow and painful, all you need to do is to iterate over all databases and over all replicated tables and execute that command for every one of them.
 
-And remember, next time user a cluster of 3+ Zookeeper nodes. ;)
+And remember, next time, use a cluster of 3+ Zookeeper nodes 😉
 
