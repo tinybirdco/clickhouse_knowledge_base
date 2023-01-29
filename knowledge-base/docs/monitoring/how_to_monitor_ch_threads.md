@@ -19,12 +19,12 @@ In these cases, a common strategy you might be tempted to use is to dump all the
 However, ClickHouse has some built-in introspection features that makes this much easier.
 
 ## Using introspection functions to monitoring threads
-Here a oneliner that you can execute in a command terminal in the target machine:
+Here a oneliner that you can execute in a terminal in the target machine:
 
 ```bash
-    clickhouse client -mn <<<"SET allow_introspection_functions = 1; WITH arrayMap(x -> demangle(addressToSymbol(x)), trace) AS all SELECT thread_name, thread_id, query_id, arrayStringConcat(all, '\n') AS res FROM system.stack_trace format Vertical" > ch_stacks
+clickhouse client -mn <<<"SET allow_introspection_functions = 1; WITH arrayMap(x -> demangle(addressToSymbol(x)), trace) AS all SELECT thread_name, thread_id, query_id, arrayStringConcat(all, '\n') AS res FROM system.stack_trace format Vertical" > ch_stacks
 ```
 
-This command will dump the state of all the ClickHouse threads into the ch_stacks file. 
+This command will dump the state of all the ClickHouse threads into the `ch_stacks` file. 
 
 As an added bonus, you can execute the command on multiple instances to compare their performance if you are investigating a degradation on a particular instance.
