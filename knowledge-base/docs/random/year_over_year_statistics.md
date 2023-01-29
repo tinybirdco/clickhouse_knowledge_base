@@ -12,7 +12,7 @@ tags:
 
 You can get year over year (yoy) growth in ClickHouse with a simple query like this:
 
-```SQL
+```sql
     CREATE TABLE events
     (
         timestamp DateTime,
@@ -24,7 +24,7 @@ You can get year over year (yoy) growth in ClickHouse with a simple query like t
 
 Now insert some random data...
 
-```SQL
+```sql
     INSERT INTO events SELECT
         now() - toIntervalYear(1),
         toString(number % 10),
@@ -40,7 +40,7 @@ Now insert some random data...
 
 ...and calculate the year over year growth with `sumIf()`!
 
-```SQL
+```sql
 WITH toYear(timestamp) AS year
 SELECT
     key,

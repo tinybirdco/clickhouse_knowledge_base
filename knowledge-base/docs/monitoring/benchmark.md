@@ -38,7 +38,7 @@ This is only useful when evaluating a function, not a whole query. It's better t
 
 ## Use numbers() or zeros() to generate many rows
 
-``` SQL
+```sql
     SELECT sum(number) FROM numbers(1000000000);
 
     SELECT sum(zero) FROM zeros(1000000000);
@@ -46,7 +46,7 @@ This is only useful when evaluating a function, not a whole query. It's better t
 
 ## Use ignore() to move conditions to the where clause
 
-``` SQL
+```sql
     SELECT *
     FROM zeros(1000000)
     WHERE NOT ignore(JSONExtract('{"a": "hi", "b": "hello", "c": "hola", "d": "see you, bye, bye"}', 'Tuple(a LowCardinality(String), b LowCardinality(String), c LowCardinality(String), d LowCardinality(String) )'))
@@ -57,7 +57,7 @@ This is only useful when evaluating a function, not a whole query. It's better t
 
 ## But use materialize() to force the evaluation of const values for all rows
 
-```SQL
+```sql
     SELECT *
     FROM zeros(1000000)
     WHERE NOT ignore(JSONExtract(materialize('{"a": "hi", "b": "hello", "c": "hola", "d": "see you, bye, bye"}'), 'Tuple(a String, b String, c String, d String )'))

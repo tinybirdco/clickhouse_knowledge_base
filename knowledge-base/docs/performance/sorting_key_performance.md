@@ -16,6 +16,6 @@ The rule of thumb is: sort the columns from smallest cardinality to largest.
 
 For example, if the column 'type' may have 100 different values, the column 'color' could have 50 values and 'user_id' 1M different values, try:
 
-``` sql
+```sql
     ENGINE_SORTING_KEY color, type, user_id
 ```

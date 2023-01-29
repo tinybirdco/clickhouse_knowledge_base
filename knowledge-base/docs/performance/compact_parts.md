@@ -16,7 +16,7 @@ This comes at a cost, operations affecting multiple columns become more expensiv
 
 We can take advantage of [compact parts](https://clickhouse.com/docs/en/engines/table-engines/mergetree-family/mergetree#mergetree-data-storage), to validate the idea we'll create two tables with 90 columns each, forcing one of them to use compact parts:
 
-``` SQL
+```sql
 
     DROP DATABASE IF EXISTS wide_compact;
     CREATE DATABASE wide_compact;

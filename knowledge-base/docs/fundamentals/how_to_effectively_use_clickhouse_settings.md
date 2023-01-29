@@ -17,13 +17,13 @@ Here are 5 things to take into account when using ClickHouse settings.
 ## 1. Apply settings to specific queries
 You can apply a `SETTING` to a specific query:
 
-```SQL
+```sql
     OPTIMIZE TABLE table_name FINAL SETTINGS optimize_throw_if_noop=1
 ```
 ## 2. Apply settings to clickhouse-client sessions
 You can apply a ``SETTING`` to a ``clickhouse-client`` session:
 
-```SQL
+```sql
     clickhouse-client
     SET max_thread=1
     -- now the setting applies to all the queries from this point
@@ -39,7 +39,7 @@ Server settings (those in ``config.xml``) do require a server restart.
 ## 5. Specifying table settings
 When configuring table settings, some need to be specified on table creation, but the table can be altered afterwards.
 
-```SQL
+```sql
     CREATE TABLE deleteme
     (
         `number` UInt64
@@ -52,7 +52,7 @@ When configuring table settings, some need to be specified on table creation, bu
 ## Bonus: Inspecting current settings
 You can inspect current settings applied in several ways:
 
-```SQL
+```sql
     SELECT getSetting('max_threads')
 
     ┌─getSetting('max_threads')─┐
@@ -60,7 +60,7 @@ You can inspect current settings applied in several ways:
     └───────────────────────────┘
 ```
 
-```SQL
+```sql
     SELECT *
     FROM system.settings
     WHERE name = 'max_threads'

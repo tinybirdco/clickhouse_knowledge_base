@@ -12,7 +12,7 @@ tags:
 
 If you have the ``query_id`` of a ClickHouse query, you can estimate the running percentage and time to completion with this query:
 
-```SQL
+```sql
     SELECT
         query_id,
         (100 * read_rows) / total_rows_approx AS progress_percentage,

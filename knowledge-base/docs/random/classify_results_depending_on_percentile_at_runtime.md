@@ -12,7 +12,7 @@ tags:
 
 If you want to classify each result row in a query based on percentile, you can combine arrayMap and arraySum to classify each row.
 
-``` SQL
+```sql
     WITH (
             SELECT quantiles(0.33, 0.66)(number)
             FROM numbers(10)

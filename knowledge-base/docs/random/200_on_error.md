@@ -16,7 +16,7 @@ This happens because in order to start streaming data back to the client ClickHo
 
 For example:
 
-```SQL
+```sql
     $ echo 'SELECT number FROM system.numbers' | curl -v 'http://localhost:8123/?max_execution_time=0.1' --data-binary @-
     *   Trying 127.0.0.1:8123...
     > POST /?max_execution_time=0.1 HTTP/1.1
@@ -63,7 +63,7 @@ Here ClickHouse returned the 200 code, started streaming data to the client and 
 If you would rather avoid this behaviour, you can set ClickHouse to wait until the end of the query (`wait_end_of_query=1`) to start streaming data. This means that ClickHouse will use memory (or disk) to buffer it until everything is ready to be sent.
 
 
-```SQL
+```sql
     $ echo 'SELECT number FROM system.numbers' | curl -v 'http://localhost:8123/?max_execution_time=0.1&wait_end_of_query=1' --data-binary @-
     *   Trying 127.0.0.1:8123...
     * Connected to localhost (127.0.0.1) port 8123 (#0)

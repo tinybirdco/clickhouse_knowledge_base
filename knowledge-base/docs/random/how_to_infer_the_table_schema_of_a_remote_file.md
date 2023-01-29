@@ -11,7 +11,7 @@ tags:
 # How to infer the table schema of a remote file
 If you want to create a ClickHouse table from a remote file, you can infer the schema based on the data in that file. To do so, just use ``DESCRIBE TABLE`` and the url.
 
-```SQL
+```sql
     DESCRIBE TABLE url('https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2022-05.parquet')
 
     ┌─name──────────────────┬─type────────────────────┬─default_type─┬─default_expression─┬─comment─┬─codec_expression─┬─ttl_expression─┐

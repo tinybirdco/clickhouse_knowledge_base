@@ -12,7 +12,7 @@ tags:
 
 The function `normalizedQueryHash` sometimes returns the same value for queries with the same structure but that use different resources:
 
-``` SQL
+```sql
 
     SELECT
         normalizedQueryHash('SELECT * FROM table_123') = normalizedQueryHash('SELECT * FROM table_456') AS is_equal,

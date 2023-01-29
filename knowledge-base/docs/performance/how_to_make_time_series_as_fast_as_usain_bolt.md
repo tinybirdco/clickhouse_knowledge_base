@@ -15,7 +15,7 @@ Let's compare 3 table engines to find out.
 
 Start by creating a MergeTree table with 1B rows:
 
-```SQL
+```sql
     CREATE TABLE deleteme
     (
         `number` UInt64,
@@ -45,7 +45,7 @@ These are the results for the queries with the source ``MergeTree`` table:
 ### ``MergeTree``
 #### Group by day and use a ``MergeTree``
 
-```SQL
+```sql
     SELECT
         toDate(timestamp) AS date,
         avg(number) AS avg_number,
@@ -61,7 +61,7 @@ These are the results for the queries with the source ``MergeTree`` table:
 
 #### Group by month and use a ``MergeTree``
 
-```SQL
+```sql
     SELECT
         toStartOfMonth(timestamp) AS date,
         avg(number) AS avg_number,
@@ -77,7 +77,7 @@ These are the results for the queries with the source ``MergeTree`` table:
 ### ``AggregatingMergeTree``
 #### Group by day and use an ``AggregatingMergeTree``
 
-```SQL
+```sql
     SELECT
         date,
         avgMerge(avg_number) AS aa,
@@ -93,7 +93,7 @@ These are the results for the queries with the source ``MergeTree`` table:
 
 #### Group by month and use an ``AggregatingMergeTree``
 
-```SQL
+```sql
     SELECT
         date,
         avgMerge(avg_number) AS aa,
@@ -112,7 +112,7 @@ Note that you must use the ``-Merge`` combinator to get the final aggregated res
 ### ``SummingMergeTree``
 #### Group by day and use an ``SummingMergeTree``
 
-```SQL
+```sql
     SELECT
         date,
         avg(avg_number) AS aa,
@@ -128,7 +128,7 @@ Note that you must use the ``-Merge`` combinator to get the final aggregated res
 
 #### Group by month and use an ``SummingMergeTree``
 
-```SQL
+```sql
     SELECT
         date,
         avg(avg_number) AS aa,

@@ -25,7 +25,7 @@ Do you have more than one column that you often use to filter data? If so, you c
 
 Here's see an example:
 
-```SQL
+```sql
     CREATE TABLE deleteme
     (
         `product_id` UInt64,
@@ -40,7 +40,7 @@ Here's see an example:
 
 The total size of this table is ~7MiB:
 
-```SQL
+```sql
     SELECT formatReadableSize(total_bytes)
     FROM system.tables
     WHERE name = 'deleteme'
@@ -53,7 +53,7 @@ The total size of this table is ~7MiB:
 
 Running a query filtered by ``product_id`` processes only ~1M rows, since the table is first sorted by that column.
 
-```SQL
+```sql
     SELECT *
     FROM deleteme
     WHERE product_id = 10
@@ -64,7 +64,7 @@ Running a query filtered by ``product_id`` processes only ~1M rows, since the ta
 
 But if you filter by ``client_id`` (the secondary sorting key) ClickHouse reads ~3x the data, since the same ``client_id`` is repeated in different blocks in disk ordered by ``product_id`` and ClickHouse needs to read and process more data to run the query:
 
-```SQL
+```sql
     SELECT *
     FROM deleteme
     WHERE client_id = 10
@@ -77,7 +77,7 @@ Here's where an inverted index comes in handy. The concept is really simple, in 
 
 Heres's see an example:
 
-```SQL
+```sql
     ALTER TABLE deleteme
         ADD PROJECTION deleteme_by_client_id
         (
@@ -92,7 +92,7 @@ The ``PROJECTION`` sorts the current data by ``client_id``, takes care of sortin
 
 Now if you run the same query as above filtering by ``client_id``, you see that ClickHouse read ~1M rows:
 
-```SQL
+```sql
     SELECT *
     FROM deleteme
     WHERE client_id = 10
@@ -105,7 +105,7 @@ Now if you run the same query as above filtering by ``client_id``, you see that 
 
 To make sure that ``PROJECTION`` was used effectively, you can check the ``query_log``:
 
-```SQL
+```sql
     SELECT projections
     FROM system.query_log
     WHERE (event_time > (now() - toIntervalMinute(5))) AND (query_id = '51a55fec-d526-480b-870b-424a0c6471d3')
@@ -119,7 +119,7 @@ To make sure that ``PROJECTION`` was used effectively, you can check the ``query
 
 Of course this comes at the cost of duplicating data, but in certain cases this is an acceptable tradeoff, especially for smaller tables.
 
-```SQL
+```sql
     SELECT formatReadableSize(total_bytes)
     FROM system.tables
     WHERE name = 'deleteme'

@@ -20,7 +20,7 @@ Three basic rules:
 
 Let's see a basic example looking at storage and processed bytes for a simple query.
 
-```SQL
+```sql
     CREATE TABLE deleteme_wrong_type
     (
         `number` UInt64
@@ -34,7 +34,7 @@ Let's see a basic example looking at storage and processed bytes for a simple qu
 
 While ClickHouse does a great job compressing...
 
-``` SQL
+```sql
     SELECT
         total_rows,
         formatReadableSize(total_bytes) AS bytes
@@ -50,7 +50,7 @@ While ClickHouse does a great job compressing...
 
 ...when it's time to process bytes you end up processing 8GB of data:
 
-```SQL
+```sql
     SELECT sum(number)
     FROM deleteme_wrong_type
 
@@ -63,7 +63,7 @@ While ClickHouse does a great job compressing...
 
 In this case you don't need more than a ``UInt8``, so let's compare the difference using the right type for the job:
 
-```SQL
+```sql
     CREATE TABLE deleteme_right_type
     (
         `number` UInt8
@@ -77,7 +77,7 @@ In this case you don't need more than a ``UInt8``, so let's compare the differen
 
 Storage is more or less the same...
 
-```SQL
+```sql
     SELECT
         total_rows,
         formatReadableSize(total_bytes) AS bytes
@@ -93,7 +93,7 @@ Storage is more or less the same...
 
 ...but there's a huge difference in bytes processed:
 
-```SQL
+```sql
     SELECT sum(number)
     FROM deleteme_right_type
 
