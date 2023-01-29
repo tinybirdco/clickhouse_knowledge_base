@@ -16,7 +16,7 @@ Three basic rules:
 
 - Don't use floats for integers
 - Choose the right precision for numbers, and favor the lower precision
-- Use ``LowCardinality(String)`` or ``FixedString`` for text when possible
+- Use `LowCardinality(String)` or `FixedString` for text when possible
 
 Let's see a basic example looking at storage and processed bytes for a simple query.
 
@@ -61,7 +61,7 @@ FROM deleteme_wrong_type
 1 rows in set. Elapsed: 0.013 sec. Processed 10.00 million rows, 80.00 MB (767.57 million rows/s., 6.14 GB/s.)
 ```
 
-In this case you don't need more than a ``UInt8``, so let's compare the difference using the right type for the job:
+In this case you don't need more than a `UInt8`, so let's compare the difference using the right type for the job:
 
 ```sql
 CREATE TABLE deleteme_right_type

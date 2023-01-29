@@ -50,7 +50,7 @@ Ok.
 
 We can see in the output that to fulfill this query we had to read all 100M rows of data.
 
-Let's do that again, but with an ``index_granularity`` of `128`:
+Let's do that again, but with an `index_granularity` of `128`:
 
 ```sql
 CREATE TABLE reduced_index_granularity
@@ -81,4 +81,4 @@ FORMAT `Null`
 
 Now we can see that to fulfill this query, we only had to read 12.84M rows - a very significant reduction of processed data.
 
-Remember, adjusting the ``index_granularity`` comes with some tradeoffs, such as heavier indexing and slower insertions, but it's a good trick to keep in your back pocket.
+Remember, adjusting the `index_granularity` comes with some tradeoffs, such as heavier indexing and slower insertions, but it's a good trick to keep in your back pocket.
