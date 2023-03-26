@@ -57,40 +57,6 @@ html {
   --ifm-breadcrumb-separator: url('data:image/svg+xml,%3Csvg width="16" height="16" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M6.128 4.685a.667.667 0 0 0 0 .94l2.36 2.393-2.36 2.36a.667.667 0 1 0 .947.94l2.827-2.826a.669.669 0 0 0 0-.947l-2.827-2.86a.668.668 0 0 0-.947 0Z" fill="%23232323"/%3E%3C/svg%3E');
 }
 
-[class*="announcementBarContent"] strong {
-  font-weight: var(--ifm-font-weight-bold);
-  background-color: var(--ifm-heading-color);
-}
-
-[class*="announcementBarContent"] a {
-  padding: 0.5rem 1rem 0.5rem !important;
-  text-decoration: none !important;
-  display: block;
-  width: 100%;
-  text-align: center;
-}
-
-@media (min-width: 768px) {
-  [class*="announcementBarContent"] a {
-    padding: 0.75rem 1rem 0.75rem !important;
-  }
-}
-
-.announcementBarUnderlined {
-  border-bottom: 1px solid rgba(255,255,255, 1);
-}
-
-@media (min-width: 768px) {
-  .announcementBarUnderlined {
-    border-bottom: 1px solid rgba(255,255,255, 0.4);
-    transition: 0.2s ease-out border-bottom-color;
-  }
-}
-
-[class*="announcementBarContent"] a:hover .announcementBarUnderlined {
-  border-bottom-color: rgba(255,255,255, 1);
-}
-
 /*
 * Navbar
 */
