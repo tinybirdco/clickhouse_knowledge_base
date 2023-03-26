@@ -81,6 +81,8 @@ const config = {
             <strong>Like ClickHouse but hate complexity?</strong> 
             <span class="announcementBarUnderlined">Try Tinybird</span>
           </a>`,
+        backgroundColor: '#232323',
+        textColor: '#fff',
         isCloseable: false,
       },
       navbar: {
