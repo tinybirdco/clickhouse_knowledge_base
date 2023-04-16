@@ -12,9 +12,8 @@ tags:
 
 When you drop tables in ClickHouse, in the default Atomic database engine, the data and the table itself aren't deleted from disk until a) the table is no longer used by concurrent queries and b) 8 minutes (`old_parts_lifetime` setting) have passed since the request was received.
 
-In some circumstances, for example when you drop and recreate the table, this can cause issues with Zookeeper as the table metadata is still there pending asynchronous deletion, but you are trying to create it again. For example:
-
-```sql Dropping a replicated table and recreating it again immediately will lead to Zookeeper errors
+In some circumstances, for example when you drop and recreate the table, this can cause issues with Zookeeper as the table metadata is still there pending asynchronous deletion, but you are trying to create it again. For example: Dropping a replicated table and recreating it again immediately will lead to Zookeeper errors
+```sql
 production-01 :) drop table test.myTable;
 
 DROP TABLE test.myTable
@@ -54,7 +53,7 @@ Code: 253. DB::Exception: Received from clickhouse-01:49000. DB::Exception: Repl
 
 In this case, to avoid the wait [you can use the `SYNC` modifier](https://clickhouse.com/docs/en/sql-reference/statements/drop/#drop-table), which will delete the data and the table synchronously and won't return until everything is clear. Then you can drop and recreate tables without problems:
 
-```
+```sql
 production-01 :) CREATE TABLE test.myTable2
                  (
                      `timestamp` DateTime,
