@@ -59,6 +59,7 @@ html {
 
 [class*="announcementBarContent"] {
   background-color: var(--ifm-heading-color);
+  color: #ffffff;
 }
 
 /*
