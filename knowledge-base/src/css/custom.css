@@ -57,6 +57,10 @@ html {
   --ifm-breadcrumb-separator: url('data:image/svg+xml,%3Csvg width="16" height="16" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M6.128 4.685a.667.667 0 0 0 0 .94l2.36 2.393-2.36 2.36a.667.667 0 1 0 .947.94l2.827-2.826a.669.669 0 0 0 0-.947l-2.827-2.86a.668.668 0 0 0-.947 0Z" fill="%23232323"/%3E%3C/svg%3E');
 }
 
+[class*="announcementBarContent"] {
+  background-color: var(--ifm-heading-color);
+}
+
 /*
 * Navbar
 */
