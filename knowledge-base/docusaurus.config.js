@@ -23,7 +23,7 @@ const config = {
   ],
   scripts: [
     {
-      src: '/rs.js'
+      src: 'https://www.tinybird.co/clickhouse/knowledge-base/rs.js'
     }
   ],
   presets: [
