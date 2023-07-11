@@ -23,7 +23,7 @@ const config = {
   ],
   scripts: [
     {
-      src: 'rs.js'
+      src: '/rs.js'
     }
   ],
   presets: [
