@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'ClickHouse Knowledge Base',
+  title: 'Tinybird Knowledge Base for ClickHouse®️',
   tagline: 'with love from Tinybird',
   url: 'https://www.tinybird.co',
   baseUrl: '/clickhouse/knowledge-base/',
@@ -74,13 +74,13 @@ const config = {
       },
       announcementBar: {
         id: 'try_tinybird',
-        content: 'Love ClickHouse but hate complexity? <a href="https://www.tinybird.co/clickhouse">Try Tinybird</a>',
+        content: 'Love speed but hate complexity? <a href="https://www.tinybird.co/clickhouse">Try Tinybird</a>',
         backgroundColor: '#232323',
         textColor: '#fff',
         isCloseable: false,
       },
       navbar: {
-        title: 'ClickHouse Knowledge Base',
+        title: 'Tinybird Knowledge Base for ClickHouse®️',
         logo: {
           alt: 'ClickHouse Knowledge Base Logo',
           src: 'img/clickhouse-kb-logo.svg',
@@ -105,16 +105,12 @@ const config = {
             href: 'https://www.tinybird.co/join-our-slack-community',
           },
           {
-            label: 'Daily Tips on Twitter',
-            href: 'https://twitter.com/ClickHouseTips',
-          },
-          {
             label: 'Tinybird GitHub',
             href: 'https://github.com/tinybirdco',
           },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Tinybird.
-        ClickHouse® is a registered trademark of ClickHouse, Inc. All Rights Reserved`,
+        Tinybird is not affiliated with, associated with, or sponsored by ClickHouse, Inc. ClickHouse® is a registered trademark of ClickHouse, Inc.`,
       },
       prism: {
         theme: require('./custom-code-theme'),
