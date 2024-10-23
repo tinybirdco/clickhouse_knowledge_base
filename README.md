@@ -1,17 +1,17 @@
 # Introduction
 
-Welcome to the ClickHouse® Knowledge Base, curated with love by [Tinybird](https://tinybird.co)! 
+Welcome to the Tinybird Knowledge Base for ClickHouse®, curated with love by [Tinybird](https://tinybird.co)! 
 
 This information can be used with any standard ClickHouse® install.
 
 ## About this Knowledge Base
-This Knowledge Base was created with love and maintained by the team at [Tinybird](https://www.tinybird.co). Tinybird uses ClickHouse under the hood, we've learned alot about it over the years, and we wanted to start sharing our knowledge with the ClickHouse community.
+This Knowledge Base was created with love and maintained by the team at Tinybird. Tinybird uses and helps contribute to open source ClickHouse, we've learned a lot about it over the years, and we wanted to start sharing our knowledge with the ClickHouse community.
 
-If you have extensive ClickHouse experience, and want to contribute tips of your own, please do!
+If you have extensive experience with open source ClickHouse, and want to contribute tips of your own, please do!
 
 ## Want to contribute?
 
-We welcome contributions from the broader ClickHouse community. Please read [this](https://github.com/tinybirdco/clickhouse_knowledge_base/blob/main/CONTRIBUTING.md) for guidelines on how to contribute.
+We welcome contributions from the broader open source ClickHouse community. Please read [this](https://github.com/tinybirdco/clickhouse_knowledge_base/blob/main/CONTRIBUTING.md) for guidelines on how to contribute.
 
 ## Development
 
