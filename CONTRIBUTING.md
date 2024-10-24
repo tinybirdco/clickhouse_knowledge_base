@@ -2,11 +2,11 @@
 
 We welcome contributions from the broader ClickHouse community! 
 
-If you've discovered something cool about ClickHouse that you want to share with other ClickHouse aficionados, the ClickHouse Knowledge Base is exactly the place to do it.
+If you've discovered something cool about ClickHouse that you want to share with other ClickHouse aficionados, the Tinybird Knowledge Base for ClickHouse is exactly the place to do it.
 
 ## How to contribute
 
-1. Clone the ClickHouse Knowledge Base repo.
+1. Clone the Tinybird Knowledge Base for ClickHouse repo.
 2. Create a new branch for your tip.
 3. Write your tip using Markdown formatting; using code blocks with the appropriate language name for any code snippets.
 4. Save your tip as a .md file in `knowledge-base/docs/{category}` choosing the most appropriate category.
