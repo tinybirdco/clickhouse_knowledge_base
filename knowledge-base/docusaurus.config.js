@@ -22,9 +22,6 @@ const config = {
   plugins: [
   ],
   scripts: [
-    {
-      src: 'https://www.tinybird.co/clickhouse/knowledge-base/rs.js'
-    }
   ],
   presets: [
     [
@@ -82,7 +79,7 @@ const config = {
       navbar: {
         title: 'Tinybird Knowledge Base for ClickHouse®️',
         logo: {
-          alt: 'ClickHouse Knowledge Base Logo',
+          alt: 'Tinybird Knowledge Base for ClickHouse® Logo',
           src: 'img/clickhouse-kb-logo.svg',
         },
         items: [
