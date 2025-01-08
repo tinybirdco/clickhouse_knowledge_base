@@ -1,3 +1,7 @@
+# The CHKB is no longer maintained
+
+*The CHKB is no longer maintained by Tinybird. The repo is publicly archived so that any useful content is still available, and we welcome anyone that wishes to fork and continue the effort.*
+
 # Introduction
 
 Welcome to the Tinybird Knowledge Base for ClickHouse®, curated with love by [Tinybird](https://tinybird.co)! 
